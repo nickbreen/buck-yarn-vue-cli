@@ -2066,7 +2066,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@vue/cli-plugin-babel@npm:~4.3.0":
+"@vue/cli-plugin-babel@npm:*, @vue/cli-plugin-babel@npm:~4.3.0":
   version: 4.3.1
   resolution: "@vue/cli-plugin-babel@npm:4.3.1"
   dependencies:
@@ -2083,7 +2083,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@vue/cli-plugin-eslint@npm:~4.3.0":
+"@vue/cli-plugin-eslint@npm:*, @vue/cli-plugin-eslint@npm:~4.3.0":
   version: 4.3.1
   resolution: "@vue/cli-plugin-eslint@npm:4.3.1"
   dependencies:
@@ -3350,6 +3350,25 @@ __metadata:
   languageName: node
   linkType: hard
 
+"app@workspace:packages/app":
+  version: 0.0.0-use.local
+  resolution: "app@workspace:packages/app"
+  dependencies:
+    "@vue/cli-plugin-babel": ~4.3.0
+    "@vue/cli-plugin-eslint": ~4.3.0
+    "@vue/cli-service": ~4.3.0
+    babel-eslint: ^10.1.0
+    core-js: ^3.6.4
+    eslint: ^6.7.2
+    eslint-plugin-vue: ^6.2.2
+    sass: ^1.26.3
+    sass-loader: ^8.0.2
+    vue: ^2.6.11
+    vue-cli-plugin-files: "workspace:*"
+    vue-template-compiler: ^2.6.11
+  languageName: unknown
+  linkType: soft
+
 "aproba@npm:^1.0.3, aproba@npm:^1.1.1":
   version: 1.2.0
   resolution: "aproba@npm:1.2.0"
@@ -3769,7 +3788,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"bluebird@npm:^3.1.1, bluebird@npm:^3.5.5":
+"bluebird@npm:*, bluebird@npm:^3.1.1, bluebird@npm:^3.5.5":
   version: 3.7.2
   resolution: "bluebird@npm:3.7.2"
   checksum: 2/4f2288662f3d4eadbb82d4daa4a7d7976a28fa3c7eb4102c9b4033b03e5be4574ba123ac52a7c103cde4cb7b2d2afc1dbe41817ca15a29ff21ecd258d0286047
@@ -12926,7 +12945,7 @@ fsevents@~2.1.2:
   languageName: node
   linkType: hard
 
-"sass@npm:^1.26.3":
+"sass@npm:*, sass@npm:^1.26.3":
   version: 1.26.3
   resolution: "sass@npm:1.26.3"
   dependencies:

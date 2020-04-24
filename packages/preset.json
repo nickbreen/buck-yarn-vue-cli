@@ -8,7 +8,7 @@
     "@vue/cli-plugin-eslint": {},
     "vue-cli-plugin-files": {
       "version": "workspace:*",
-      "BUCK": "include_defs('//buck.defs')\n\nvue()\n",
+      "BUCK": "include_defs('//buck.defs')\n\nvue(name = '${projectName}')\n",
       "babel.config.js": null,
       "vue.config.js": null,
       ".eslintrc.js": null,

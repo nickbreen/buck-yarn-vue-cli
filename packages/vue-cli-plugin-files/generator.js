@@ -3,6 +3,11 @@ const fs = require('fs')
 // https://gist.github.com/mathiasbynens/1010324
 function bytes(s,b,i,c){for(b=i=0;c=s.charCodeAt(i++);b+=c>>11?3:c>>7?2:1);return b}
 
+function render(template, data)
+{
+    return template.replace(/(\\?)(\$\{(\w+)\})/g, (_, esc, expr, prop) => esc ? expr : data[prop]);
+}
+
 module.exports = (api, options, rootOptions) => {
     return api.render(files => {
         Object.entries(options)
@@ -16,8 +21,8 @@ module.exports = (api, options, rootOptions) => {
                 } else if (fs.existsSync(api.resolve(file))) {
                     api.exitLog(`Refusing to overwrite ${file}`, 'warn')
                 } else {
-                    api.exitLog(`Wrote ${bytes(content)} bytes to ${file}`, 'info')
-                    files[file] = content
+                    files[file] = render(content, rootOptions)
+                    api.exitLog(`Wrote ${bytes(files[file])} bytes to ${file}`, 'info')
                 }
             });
     });
