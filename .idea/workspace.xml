@@ -26,7 +26,18 @@
     </select>
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="b199685c-7cec-49ed-9e71-f2e2d3ea6cc5" name="Default Changelist" comment="" />
+    <list default="true" id="b199685c-7cec-49ed-9e71-f2e2d3ea6cc5" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.pnp.js" beforeDir="false" afterPath="$PROJECT_DIR$/.pnp.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/buck-out/gen/lib/vue-cli/__vue.sh__/cells/__default__/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/buck-out/gen/lib/vue-cli/__vue.sh__/cells/__default__/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/buck-out/gen/lib/vue-cli/__vue.sh__/cells/__default__/.pnp.js" beforeDir="false" afterPath="$PROJECT_DIR$/buck-out/gen/lib/vue-cli/__vue.sh__/cells/__default__/.pnp.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/buck-out/gen/lib/vue-cli/__vue.sh__/cells/__default__/yarn.lock" beforeDir="false" afterPath="$PROJECT_DIR$/buck-out/gen/lib/vue-cli/__vue.sh__/cells/__default__/yarn.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/buck-out/gen/lib/yarn/__yarn.sh__/cells/__default__/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/buck-out/gen/lib/yarn/__yarn.sh__/cells/__default__/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/buck-out/gen/lib/yarn/__yarn.sh__/cells/__default__/.pnp.js" beforeDir="false" afterPath="$PROJECT_DIR$/buck-out/gen/lib/yarn/__yarn.sh__/cells/__default__/.pnp.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/buck-out/gen/lib/yarn/__yarn.sh__/cells/__default__/yarn.lock" beforeDir="false" afterPath="$PROJECT_DIR$/buck-out/gen/lib/yarn/__yarn.sh__/cells/__default__/yarn.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/yarn.lock" beforeDir="false" afterPath="$PROJECT_DIR$/yarn.lock" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -52,6 +63,14 @@
     <property name="node.js.selected.package.eslint" value="(autodetect)" />
     <property name="nodejs_package_manager_path" value="yarn" />
   </component>
+  <component name="ReadonlyStatusHandler">
+    <option name="SHOW_DIALOG" value="false" />
+  </component>
+  <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/packages/hello-world/src" />
+    </key>
+  </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="2" />
   </component>
@@ -74,6 +93,11 @@
             <list>
               <RecentGroup>
                 <option name="FILTER_VALUES">
+                  <option value="HEAD" />
+                </option>
+              </RecentGroup>
+              <RecentGroup>
+                <option name="FILTER_VALUES">
                   <option value="master" />
                 </option>
               </RecentGroup>
@@ -82,20 +106,38 @@
         </entry>
       </map>
     </option>
+    <option name="oldMeFiltersMigrated" value="true" />
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="build with buck" />
     <MESSAGE value="named vue modules" />
-    <option name="LAST_COMMIT_MESSAGE" value="named vue modules" />
+    <MESSAGE value="remove test modules" />
+    <option name="LAST_COMMIT_MESSAGE" value="remove test modules" />
   </component>
   <component name="WindowStateProjectService">
-    <state x="1062" y="256" width="1705" height="1634" key="CommitChangelistDialog2" timestamp="1587711608387">
+    <state x="1724" y="925" width="1353" height="382" key="#Custom_Plugin_Repositories" timestamp="1587712722145">
       <screen x="0" y="54" width="3840" height="2106" />
     </state>
-    <state x="1062" y="256" width="1705" height="1634" key="CommitChangelistDialog2/0.54.3840.2106@0.54.3840.2106" timestamp="1587711608387" />
+    <state x="1724" y="925" width="1353" height="382" key="#Custom_Plugin_Repositories/0.54.3840.2106@0.54.3840.2106" timestamp="1587712722145" />
+    <state x="1115" y="389" width="1600" height="1452" key="#Plugins" timestamp="1587712801599">
+      <screen x="0" y="54" width="3840" height="2106" />
+    </state>
+    <state x="1115" y="389" width="1600" height="1452" key="#Plugins/0.54.3840.2106@0.54.3840.2106" timestamp="1587712801599" />
+    <state x="1062" y="242" width="1705" height="1634" key="CommitChangelistDialog2" timestamp="1587712046700">
+      <screen x="0" y="54" width="3840" height="2106" />
+    </state>
+    <state x="1062" y="242" width="1705" height="1634" key="CommitChangelistDialog2/0.54.3840.2106@0.54.3840.2106" timestamp="1587712046700" />
     <state x="1115" y="559" width="1600" height="1084" key="Vcs.Push.Dialog.v2" timestamp="1587711612124">
       <screen x="0" y="54" width="3840" height="2106" />
     </state>
     <state x="1115" y="559" width="1600" height="1084" key="Vcs.Push.Dialog.v2/0.54.3840.2106@0.54.3840.2106" timestamp="1587711612124" />
+    <state x="1201" y="52" width="1433" height="2556" key="search.everywhere.popup" timestamp="1587712642007">
+      <screen x="0" y="54" width="3840" height="2106" />
+    </state>
+    <state x="1201" y="52" width="1433" height="2556" key="search.everywhere.popup/0.54.3840.2106@0.54.3840.2106" timestamp="1587712642007" />
+    <state x="1457" y="899" width="925" height="404" key="vcs.readOnlyHandler.ReadOnlyStatusDialog" timestamp="1587712033522">
+      <screen x="0" y="54" width="3840" height="2106" />
+    </state>
+    <state x="1457" y="899" width="925" height="404" key="vcs.readOnlyHandler.ReadOnlyStatusDialog/0.54.3840.2106@0.54.3840.2106" timestamp="1587712033522" />
   </component>
 </project>

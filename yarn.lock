@@ -3350,25 +3350,6 @@ __metadata:
   languageName: node
   linkType: hard
 
-"app@workspace:packages/app":
-  version: 0.0.0-use.local
-  resolution: "app@workspace:packages/app"
-  dependencies:
-    "@vue/cli-plugin-babel": ~4.3.0
-    "@vue/cli-plugin-eslint": ~4.3.0
-    "@vue/cli-service": ~4.3.0
-    babel-eslint: ^10.1.0
-    core-js: ^3.6.4
-    eslint: ^6.7.2
-    eslint-plugin-vue: ^6.2.2
-    sass: ^1.26.3
-    sass-loader: ^8.0.2
-    vue: ^2.6.11
-    vue-cli-plugin-files: "workspace:*"
-    vue-template-compiler: ^2.6.11
-  languageName: unknown
-  linkType: soft
-
 "aproba@npm:^1.0.3, aproba@npm:^1.1.1":
   version: 1.2.0
   resolution: "aproba@npm:1.2.0"
@@ -8022,6 +8003,25 @@ fsevents@~2.1.2:
   checksum: 2/060ddbab0d62fe46a24fab897c2bac1b033e0dbdbbdbe16dd1a3d51b66b4eb4b157e3de44b750fc56f1ad56461289f953bd7ffc10084cadb78928b179ecc4d5b
   languageName: node
   linkType: hard
+
+"hello-world@workspace:*, hello-world@workspace:packages/hello-world":
+  version: 0.0.0-use.local
+  resolution: "hello-world@workspace:packages/hello-world"
+  dependencies:
+    "@vue/cli-plugin-babel": ~4.3.0
+    "@vue/cli-plugin-eslint": ~4.3.0
+    "@vue/cli-service": ~4.3.0
+    babel-eslint: ^10.1.0
+    core-js: ^3.6.4
+    eslint: ^6.7.2
+    eslint-plugin-vue: ^6.2.2
+    sass: ^1.26.3
+    sass-loader: ^8.0.2
+    vue: ^2.6.11
+    vue-cli-plugin-files: "workspace:*"
+    vue-template-compiler: ^2.6.11
+  languageName: unknown
+  linkType: soft
 
 "hex-color-regex@npm:^1.1.0":
   version: 1.1.0
@@ -12735,7 +12735,7 @@ fsevents@~2.1.2:
   languageName: node
   linkType: hard
 
-"resolve@^1.1.6, resolve@^1.10.0, resolve@^1.12.0, resolve@^1.15.1, resolve@^1.3.2, resolve@^1.8.1":
+"resolve@^1.1.6, resolve@^1.10.0, resolve@^1.15.1, resolve@^1.3.2, resolve@^1.8.1":
   version: 1.16.1
   resolution: "resolve@npm:1.16.1"
   dependencies:
@@ -12744,12 +12744,30 @@ fsevents@~2.1.2:
   languageName: node
   linkType: hard
 
-"resolve@patch:resolve@^1.1.6#builtin<compat/resolve>, resolve@patch:resolve@^1.10.0#builtin<compat/resolve>, resolve@patch:resolve@^1.12.0#builtin<compat/resolve>, resolve@patch:resolve@^1.15.1#builtin<compat/resolve>, resolve@patch:resolve@^1.3.2#builtin<compat/resolve>, resolve@patch:resolve@^1.8.1#builtin<compat/resolve>":
+resolve@^1.12.0:
+  version: 1.17.0
+  resolution: "resolve@npm:1.17.0"
+  dependencies:
+    path-parse: ^1.0.6
+  checksum: 2/5e3cdb8cf68c20b0c5edeb6505e7fab20c6776af0cae4b978836e557420aef7bb50acd25339bbb143b7f80533aa1988c7e827a0061aee9c237926a7d2c41f8d0
+  languageName: node
+  linkType: hard
+
+"resolve@patch:resolve@^1.1.6#builtin<compat/resolve>, resolve@patch:resolve@^1.10.0#builtin<compat/resolve>, resolve@patch:resolve@^1.15.1#builtin<compat/resolve>, resolve@patch:resolve@^1.3.2#builtin<compat/resolve>, resolve@patch:resolve@^1.8.1#builtin<compat/resolve>":
   version: 1.16.1
   resolution: "resolve@patch:resolve@npm%3A1.16.1#builtin<compat/resolve>::version=1.16.1&hash=e7677c"
   dependencies:
     path-parse: ^1.0.6
   checksum: 2/05dc5f167c072805e663ddaa926378acc04ed8b06a760bcd57b643f6ee9ab1dcab75397722b862bb2cd69a21f227e681df41aeecb114262546d883be4017bbe4
+  languageName: node
+  linkType: hard
+
+"resolve@patch:resolve@^1.12.0#builtin<compat/resolve>":
+  version: 1.17.0
+  resolution: "resolve@patch:resolve@npm%3A1.17.0#builtin<compat/resolve>::version=1.17.0&hash=e7677c"
+  dependencies:
+    path-parse: ^1.0.6
+  checksum: 2/76954aad72cd6ba127db4fcb3354a88be83f532ba7d58e166f776136bbeded410e0f3db86737fe0f3b4714627835bde078fa662887362336aaffb4bb7002a847
   languageName: node
   linkType: hard
 
@@ -12945,7 +12963,7 @@ fsevents@~2.1.2:
   languageName: node
   linkType: hard
 
-"sass@npm:*, sass@npm:^1.26.3":
+"sass@npm:*":
   version: 1.26.3
   resolution: "sass@npm:1.26.3"
   dependencies:
@@ -12953,6 +12971,17 @@ fsevents@~2.1.2:
   bin:
     sass: sass.js
   checksum: 2/280fb8736e0cc3a7e42895ad239198fce2e1e829f59db257011ab8099ee023a531e7072388aefa9b2068b9baf603a63e60a9d1e4e2df5e9fcdc715bf15911ed3
+  languageName: node
+  linkType: hard
+
+"sass@npm:^1.26.3":
+  version: 1.26.5
+  resolution: "sass@npm:1.26.5"
+  dependencies:
+    chokidar: ">=2.0.0 <4.0.0"
+  bin:
+    sass: sass.js
+  checksum: 2/bce01166b0f6db41dc7d685df8b36cf4622c42278fd5700db9f690c89150d39f9f2efaa0c42203351b2a90b2c044b5386927832ffa6f2ec6cfbd499e2cd54795
   languageName: node
   linkType: hard
 
@@ -14561,6 +14590,7 @@ typescript@~3.8.3:
     core-js: ^3.6.4
     eslint: ^6.7.2
     eslint-plugin-vue: ^6.2.2
+    hello-world: "workspace:*"
     sass: ^1.26.3
     sass-loader: ^8.0.2
     vue: ^2.6.11
