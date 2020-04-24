@@ -110,8 +110,8 @@ Babel's [configuration][11] can be mono-repo friendly too, but it is [a bit tric
 - [x] add JDK8, JDK11 from https://openjdk.java.net/install/ 
 - [x] experiment? make vue cli a dependency rather than a source root package; added to opt
 - [x] experiment? make yarn (and vue) buck executable modules (use buck run); see lib/yarn, lib/vue-cli
-- [ ] build node 'library' module
-- [ ] use the 'library' module in a 'app' module
+- [x] build node 'library' module
+- [x] use the 'library' module in a 'app' module
 - [ ] custom webpack project
 - [ ] main/test sources
 - [x] watchman from source
