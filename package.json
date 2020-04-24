@@ -13,5 +13,25 @@
   ],
   "resolutions": {
     "vue-cli-plugin-files": "workspace:*"
-  }
+  },
+  "peerDependencies": {
+    "supports-color": "*"
+  },
+  "webpack": {
+      "rules": [
+        {
+          "loader": "babel-loader",
+          "options": {
+            "rootMode": "upward",
+            "cacheDirectory": false
+          }
+        },
+        {
+          "loader": "eslint-loader",
+          "options": {
+            "cache": false
+          }
+        }
+      ]
+    }
 }

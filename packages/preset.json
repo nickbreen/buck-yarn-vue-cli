@@ -15,5 +15,10 @@
       ".browserslistrc": null,
       "README.md": null
     }
+  },
+  "configs": {
+    "scripts": {
+      "test": "echo No Tests!"
+    }
   }
 }

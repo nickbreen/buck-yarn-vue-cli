@@ -1,28 +1,42 @@
 def vue(
     name,
     srcs = ['**'],
-    srcs_exclude = ['BUCK']):
+    srcs_exclude = ['BUCK', 'node_modules']):
 
     all_srcs = glob(srcs, exclude = srcs_exclude) + ['package.json']
 
+    command_alias(
+        name = 'yarn-workspace',
+        exe = '//:yarn',
+        args = ['-w', get_base_path()]
+    )
+
     genrule(
-        name = '%s-test' % (name),
+        name = 'test',
         out = 'test.log',
         srcs = all_srcs,
-        cmd = 'TMP="${TMP}" SRCDIR="${SRCDIR}" $(exe //:yarn) -w %s test > ${OUT}',
+        cmd = '$(exe :yarn-workspace) test > ${OUT}',
     )
 
     genrule(
-        name = '%s-lint' % (name),
+        name = 'lint',
         out = 'lint.log',
         srcs = all_srcs,
-        cmd = 'TMP="${TMP}" SRCDIR="${SRCDIR}" $(exe //:yarn) -w %s run lint > ${OUT}',
+        cmd = '$(exe :yarn-workspace) lint > ${OUT}',
     )
 
     genrule(
-        name = '%s-build' % (name),
+        name = 'build',
         out = 'dist',
-        tests = [':%s-lint' % (name), ':%s-test' % (name)],
+        tests = [':lint', ':test'],
         srcs = all_srcs,
-        cmd = 'TMP="${TMP}" SRCDIR="${SRCDIR}" $(exe //:yarn) -w %s run build --dest ${OUT}' % (get_base_path())
+        cmd = '$(exe :yarn-workspace) build --dest "${OUT}"'
     )
+
+    genrule(
+        name = 'pack',
+        out = 'package.tgz',
+        srcs = all_srcs + [':build'],
+        cmd = '$(exe :yarn-workspace) pack --out "${OUT}"'
+    )
+

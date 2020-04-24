@@ -3,5 +3,7 @@
   <component name="JavaScriptLibraryMappings">
     <file url="file://$PROJECT_DIR$" libraries="{Node.js Core}" />
     <file url="file://$PROJECT_DIR$/.yarn" libraries="{Node.js Core}" />
+    <excludedPredefinedLibrary name="Dependencies from buck-out/gen/__yarn__/runtime_resources/__default__/package.json" />
+    <excludedPredefinedLibrary name="Dependencies from buck-out/gen/lib/vue-cli/pnp/pnp/package.json" />
   </component>
 </project>

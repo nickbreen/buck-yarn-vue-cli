@@ -27,16 +27,27 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="b199685c-7cec-49ed-9e71-f2e2d3ea6cc5" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/packages/hello-world/.gitignore" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/packages/hello-world/BUCK" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/packages/hello-world/package.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/packages/hello-world/src/HelloWorld.vue" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/packages/ui/.gitignore" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/packages/ui/BUCK" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/packages/ui/package.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/packages/ui/public/favicon.ico" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/packages/ui/public/index.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/packages/ui/src/App.vue" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/packages/ui/src/assets/logo.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/packages/ui/src/main.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/jsLibraryMappings.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/jsLibraryMappings.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.pnp.js" beforeDir="false" afterPath="$PROJECT_DIR$/.pnp.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/buck-out/gen/lib/vue-cli/__vue.sh__/cells/__default__/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/buck-out/gen/lib/vue-cli/__vue.sh__/cells/__default__/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/buck-out/gen/lib/vue-cli/__vue.sh__/cells/__default__/.pnp.js" beforeDir="false" afterPath="$PROJECT_DIR$/buck-out/gen/lib/vue-cli/__vue.sh__/cells/__default__/.pnp.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/buck-out/gen/lib/vue-cli/__vue.sh__/cells/__default__/yarn.lock" beforeDir="false" afterPath="$PROJECT_DIR$/buck-out/gen/lib/vue-cli/__vue.sh__/cells/__default__/yarn.lock" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/buck-out/gen/lib/yarn/__yarn.sh__/cells/__default__/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/buck-out/gen/lib/yarn/__yarn.sh__/cells/__default__/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/buck-out/gen/lib/yarn/__yarn.sh__/cells/__default__/.pnp.js" beforeDir="false" afterPath="$PROJECT_DIR$/buck-out/gen/lib/yarn/__yarn.sh__/cells/__default__/.pnp.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/buck-out/gen/lib/yarn/__yarn.sh__/cells/__default__/yarn.lock" beforeDir="false" afterPath="$PROJECT_DIR$/buck-out/gen/lib/yarn/__yarn.sh__/cells/__default__/yarn.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/BUCK" beforeDir="false" afterPath="$PROJECT_DIR$/BUCK" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/buck.defs" beforeDir="false" afterPath="$PROJECT_DIR$/buck.defs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/packages/preset.json" beforeDir="false" afterPath="$PROJECT_DIR$/packages/preset.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/webpack.config.js" beforeDir="false" afterPath="$PROJECT_DIR$/webpack.config.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/yarn.lock" beforeDir="false" afterPath="$PROJECT_DIR$/yarn.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/yarn.sh" beforeDir="false" afterPath="$PROJECT_DIR$/yarn.sh" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -46,8 +57,13 @@
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
+  <component name="PackageJsonUpdateNotifier">
+    <dismissed value="$PROJECT_DIR$/packages/ui/package.json" />
+  </component>
   <component name="ProjectId" id="1ayIrtOVJJ9UKmhV0DHeXU2zrB9" />
-  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true">
+    <ConfirmationsSetting value="2" id="Add" />
+  </component>
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
@@ -112,7 +128,8 @@
     <MESSAGE value="build with buck" />
     <MESSAGE value="named vue modules" />
     <MESSAGE value="remove test modules" />
-    <option name="LAST_COMMIT_MESSAGE" value="remove test modules" />
+    <MESSAGE value="use an external module in an app" />
+    <option name="LAST_COMMIT_MESSAGE" value="use an external module in an app" />
   </component>
   <component name="WindowStateProjectService">
     <state x="1724" y="925" width="1353" height="382" key="#Custom_Plugin_Repositories" timestamp="1587712722145">
@@ -123,14 +140,18 @@
       <screen x="0" y="54" width="3840" height="2106" />
     </state>
     <state x="1115" y="389" width="1600" height="1452" key="#Plugins/0.54.3840.2106@0.54.3840.2106" timestamp="1587712801599" />
-    <state x="1062" y="242" width="1705" height="1634" key="CommitChangelistDialog2" timestamp="1587712046700">
+    <state x="1062" y="228" width="1705" height="1634" key="CommitChangelistDialog2" timestamp="1587713463314">
       <screen x="0" y="54" width="3840" height="2106" />
     </state>
-    <state x="1062" y="242" width="1705" height="1634" key="CommitChangelistDialog2/0.54.3840.2106@0.54.3840.2106" timestamp="1587712046700" />
+    <state x="1062" y="228" width="1705" height="1634" key="CommitChangelistDialog2/0.54.3840.2106@0.54.3840.2106" timestamp="1587713463314" />
     <state x="1115" y="559" width="1600" height="1084" key="Vcs.Push.Dialog.v2" timestamp="1587711612124">
       <screen x="0" y="54" width="3840" height="2106" />
     </state>
     <state x="1115" y="559" width="1600" height="1084" key="Vcs.Push.Dialog.v2/0.54.3840.2106@0.54.3840.2106" timestamp="1587711612124" />
+    <state x="1498" y="370" width="834" height="1489" key="com.intellij.openapi.editor.actions.MultiplePasteAction$ClipboardContentChooser" timestamp="1587720234494">
+      <screen x="0" y="54" width="3840" height="2106" />
+    </state>
+    <state x="1498" y="370" width="834" height="1489" key="com.intellij.openapi.editor.actions.MultiplePasteAction$ClipboardContentChooser/0.54.3840.2106@0.54.3840.2106" timestamp="1587720234494" />
     <state x="1201" y="52" width="1433" height="2556" key="search.everywhere.popup" timestamp="1587712642007">
       <screen x="0" y="54" width="3840" height="2106" />
     </state>

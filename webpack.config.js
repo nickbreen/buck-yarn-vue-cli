@@ -4,6 +4,12 @@ module.exports = {
             loader: "babel-loader",
             options: {
                 rootMode: "upward",
+                cacheDirectory: false
+            }
+        },{
+            loader: "eslint-loader",
+            options: {
+                cache: false
             }
         }]
     },
