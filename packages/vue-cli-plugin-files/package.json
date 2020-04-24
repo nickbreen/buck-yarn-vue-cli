@@ -1,0 +1,7 @@
+{
+  "name": "vue-cli-plugin-files",
+  "version": "1.0.0",
+  "description": "arbitrary static file writer plugin for vue-cli",
+  "main": "index.js",
+  "license": "0BSD"
+}

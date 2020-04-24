@@ -1,0 +1,17 @@
+{
+  "name": "buck-yarn-vue-cli",
+  "private": true,
+  "devDependencies": {
+    "@vue/cli": "4.3.1",
+    "json": "9.0.6"
+  },
+  "installConfig": {
+    "pnp": true
+  },
+  "workspaces": [
+    "packages/*"
+  ],
+  "resolutions": {
+    "vue-cli-plugin-files": "workspace:*"
+  }
+}

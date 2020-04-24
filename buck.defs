@@ -1,0 +1,27 @@
+def vue(
+    srcs = ['**'],
+    srcs_exclude = ['BUCK']):
+
+    all_srcs = glob(srcs, exclude = srcs_exclude) + ['package.json']
+
+    genrule(
+        name = 'test',
+        out = 'test.log',
+        srcs = all_srcs,
+        cmd = 'TMP="${TMP}" SRCDIR="${SRCDIR}" $(exe //:yarn) -w %s  test > ${OUT}',
+    )
+
+    genrule(
+        name = 'lint',
+        out = 'lint.log',
+        srcs = all_srcs,
+        cmd = 'TMP="${TMP}" SRCDIR="${SRCDIR}" $(exe //:yarn) -w %s  run lint > ${OUT}',
+    )
+
+    genrule(
+        name = 'build',
+        out = 'dist',
+        tests = [':lint', ':test'],
+        srcs = all_srcs,
+        cmd = 'TMP="${TMP}" SRCDIR="${SRCDIR}" $(exe //:yarn) -w %s run build --dest ${OUT}' % get_base_path()
+    )

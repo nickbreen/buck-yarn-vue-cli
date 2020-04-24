@@ -1,0 +1,3 @@
+#!/usr/bin/env bash
+
+JAVA_HOME=${project}/opt/java/openjdk-8u41/jre ${project}/opt/buck/buck-v2019.10.17.01.pex "$@"

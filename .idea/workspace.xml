@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="b199685c-7cec-49ed-9e71-f2e2d3ea6cc5" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/buck-out/gen/lib/vue-cli/__vue.sh__/cells/__default__/packages/ui/.gitignore" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/buck-out/gen/lib/vue-cli/__vue.sh__/cells/__default__/packages/ui/BUCK" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/buck-out/gen/lib/vue-cli/__vue.sh__/cells/__default__/packages/ui/README.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/buck-out/gen/lib/vue-cli/__vue.sh__/cells/__default__/packages/ui/package.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/buck-out/gen/lib/vue-cli/__vue.sh__/cells/__default__/packages/ui/public/favicon.ico" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/buck-out/gen/lib/vue-cli/__vue.sh__/cells/__default__/packages/ui/public/index.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/buck-out/gen/lib/vue-cli/__vue.sh__/cells/__default__/packages/ui/src/App.vue" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/buck-out/gen/lib/vue-cli/__vue.sh__/cells/__default__/packages/ui/src/assets/logo.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/buck-out/gen/lib/vue-cli/__vue.sh__/cells/__default__/packages/ui/src/components/HelloWorld.vue" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/buck-out/gen/lib/vue-cli/__vue.sh__/cells/__default__/packages/ui/src/main.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/buck-out/gen/lib/vue-cli/__vue.sh__/cells/__default__/yarn.sh" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/buck-out/gen/lib/yarn/__yarn.sh__/cells/__default__/packages/ui/.gitignore" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/buck-out/gen/lib/yarn/__yarn.sh__/cells/__default__/packages/ui/BUCK" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/buck-out/gen/lib/yarn/__yarn.sh__/cells/__default__/packages/ui/README.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/buck-out/gen/lib/yarn/__yarn.sh__/cells/__default__/packages/ui/package.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/buck-out/gen/lib/yarn/__yarn.sh__/cells/__default__/packages/ui/public/favicon.ico" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/buck-out/gen/lib/yarn/__yarn.sh__/cells/__default__/packages/ui/public/index.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/buck-out/gen/lib/yarn/__yarn.sh__/cells/__default__/packages/ui/src/App.vue" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/buck-out/gen/lib/yarn/__yarn.sh__/cells/__default__/packages/ui/src/assets/logo.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/buck-out/gen/lib/yarn/__yarn.sh__/cells/__default__/packages/ui/src/components/HelloWorld.vue" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/buck-out/gen/lib/yarn/__yarn.sh__/cells/__default__/packages/ui/src/main.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/buck-out/gen/lib/yarn/__yarn.sh__/cells/__default__/yarn.sh" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/packages/ui/.gitignore" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/packages/ui/BUCK" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/packages/ui/README.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/packages/ui/package.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/packages/ui/public/favicon.ico" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/packages/ui/public/index.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/packages/ui/src/App.vue" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/packages/ui/src/assets/logo.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/packages/ui/src/components/HelloWorld.vue" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/packages/ui/src/main.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/yarn.sh" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/buck-yarn-vue-cli.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/buck-yarn-vue-cli.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/vue-cli-test.iml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.pnp.js" beforeDir="false" afterPath="$PROJECT_DIR$/.pnp.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.yarnrc.yml" beforeDir="false" afterPath="$PROJECT_DIR$/.yarnrc.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/BUCK" beforeDir="false" afterPath="$PROJECT_DIR$/BUCK" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/buck-out/gen/lib/vue-cli/__vue.sh__/cells/__default__/.idea/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/buck-out/gen/lib/vue-cli/__vue.sh__/cells/__default__/.idea/buck-yarn-vue-cli.iml" beforeDir="false" afterPath="$PROJECT_DIR$/buck-out/gen/lib/vue-cli/__vue.sh__/cells/__default__/.idea/buck-yarn-vue-cli.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/buck-out/gen/lib/vue-cli/__vue.sh__/cells/__default__/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/buck-out/gen/lib/vue-cli/__vue.sh__/cells/__default__/.idea/misc.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/buck-out/gen/lib/vue-cli/__vue.sh__/cells/__default__/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/buck-out/gen/lib/vue-cli/__vue.sh__/cells/__default__/.idea/vcs.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/buck-out/gen/lib/vue-cli/__vue.sh__/cells/__default__/.idea/vue-cli-test.iml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/buck-out/gen/lib/vue-cli/__vue.sh__/cells/__default__/.pnp.js" beforeDir="false" afterPath="$PROJECT_DIR$/buck-out/gen/lib/vue-cli/__vue.sh__/cells/__default__/.pnp.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/buck-out/gen/lib/vue-cli/__vue.sh__/cells/__default__/.yarnrc.yml" beforeDir="false" afterPath="$PROJECT_DIR$/buck-out/gen/lib/vue-cli/__vue.sh__/cells/__default__/.yarnrc.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/buck-out/gen/lib/vue-cli/__vue.sh__/cells/__default__/BUCK" beforeDir="false" afterPath="$PROJECT_DIR$/buck-out/gen/lib/vue-cli/__vue.sh__/cells/__default__/BUCK" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/buck-out/gen/lib/vue-cli/__vue.sh__/cells/__default__/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/buck-out/gen/lib/vue-cli/__vue.sh__/cells/__default__/README.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/buck-out/gen/lib/vue-cli/__vue.sh__/cells/__default__/buck.defs" beforeDir="false" afterPath="$PROJECT_DIR$/buck-out/gen/lib/vue-cli/__vue.sh__/cells/__default__/buck.defs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/buck-out/gen/lib/vue-cli/__vue.sh__/cells/__default__/opt/yarn/Makefile" beforeDir="false" afterPath="$PROJECT_DIR$/buck-out/gen/lib/vue-cli/__vue.sh__/cells/__default__/opt/yarn/Makefile" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/buck-out/gen/lib/vue-cli/__vue.sh__/cells/__default__/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/buck-out/gen/lib/vue-cli/__vue.sh__/cells/__default__/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/buck-out/gen/lib/vue-cli/__vue.sh__/cells/__default__/yarn.lock" beforeDir="false" afterPath="$PROJECT_DIR$/buck-out/gen/lib/vue-cli/__vue.sh__/cells/__default__/yarn.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/buck-out/gen/lib/yarn/__yarn.sh__/cells/__default__/.idea/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/buck-out/gen/lib/yarn/__yarn.sh__/cells/__default__/.idea/buck-yarn-vue-cli.iml" beforeDir="false" afterPath="$PROJECT_DIR$/buck-out/gen/lib/yarn/__yarn.sh__/cells/__default__/.idea/buck-yarn-vue-cli.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/buck-out/gen/lib/yarn/__yarn.sh__/cells/__default__/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/buck-out/gen/lib/yarn/__yarn.sh__/cells/__default__/.idea/misc.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/buck-out/gen/lib/yarn/__yarn.sh__/cells/__default__/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/buck-out/gen/lib/yarn/__yarn.sh__/cells/__default__/.idea/vcs.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/buck-out/gen/lib/yarn/__yarn.sh__/cells/__default__/.idea/vue-cli-test.iml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/buck-out/gen/lib/yarn/__yarn.sh__/cells/__default__/.pnp.js" beforeDir="false" afterPath="$PROJECT_DIR$/buck-out/gen/lib/yarn/__yarn.sh__/cells/__default__/.pnp.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/buck-out/gen/lib/yarn/__yarn.sh__/cells/__default__/.yarnrc.yml" beforeDir="false" afterPath="$PROJECT_DIR$/buck-out/gen/lib/yarn/__yarn.sh__/cells/__default__/.yarnrc.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/buck-out/gen/lib/yarn/__yarn.sh__/cells/__default__/BUCK" beforeDir="false" afterPath="$PROJECT_DIR$/buck-out/gen/lib/yarn/__yarn.sh__/cells/__default__/BUCK" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/buck-out/gen/lib/yarn/__yarn.sh__/cells/__default__/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/buck-out/gen/lib/yarn/__yarn.sh__/cells/__default__/README.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/buck-out/gen/lib/yarn/__yarn.sh__/cells/__default__/buck.defs" beforeDir="false" afterPath="$PROJECT_DIR$/buck-out/gen/lib/yarn/__yarn.sh__/cells/__default__/buck.defs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/buck-out/gen/lib/yarn/__yarn.sh__/cells/__default__/opt/yarn/Makefile" beforeDir="false" afterPath="$PROJECT_DIR$/buck-out/gen/lib/yarn/__yarn.sh__/cells/__default__/opt/yarn/Makefile" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/buck-out/gen/lib/yarn/__yarn.sh__/cells/__default__/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/buck-out/gen/lib/yarn/__yarn.sh__/cells/__default__/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/buck-out/gen/lib/yarn/__yarn.sh__/cells/__default__/yarn.lock" beforeDir="false" afterPath="$PROJECT_DIR$/buck-out/gen/lib/yarn/__yarn.sh__/cells/__default__/yarn.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/buck.defs" beforeDir="false" afterPath="$PROJECT_DIR$/buck.defs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/opt/yarn/Makefile" beforeDir="false" afterPath="$PROJECT_DIR$/opt/yarn/Makefile" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/yarn.lock" beforeDir="false" afterPath="$PROJECT_DIR$/yarn.lock" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="ProjectId" id="1ayIrtOVJJ9UKmhV0DHeXU2zrB9" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">
+    <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
+    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="node.js.detected.package.eslint" value="true" />
+    <property name="node.js.path.for.package.eslint" value="project" />
+    <property name="node.js.selected.package.eslint" value="(autodetect)" />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="2" />
+  </component>
+  <component name="WindowStateProjectService">
+    <state x="1062" y="298" width="1705" height="1634" key="CommitChangelistDialog2" timestamp="1587702319795">
+      <screen x="0" y="54" width="3840" height="2106" />
+    </state>
+    <state x="1062" y="298" width="1705" height="1634" key="CommitChangelistDialog2/0.54.3840.2106@0.54.3840.2106" timestamp="1587702319795" />
+  </component>
+</project>

@@ -1,0 +1,2 @@
+opt/*/*.tar.?z filter=lfs diff=lfs merge=lfs -text
+opt/buck/*.pex filter=lfs diff=lfs merge=lfs -text
