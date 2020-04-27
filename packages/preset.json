@@ -7,10 +7,9 @@
     "@vue/cli-plugin-babel": {},
     "@vue/cli-plugin-eslint": {},
     "vue-cli-plugin-files": {
-      "version": "workspace:*",
       "BUCK": "include_defs('//buck.defs')\n\nvue(name = '${projectName}')\n",
-      "babel.config.js": null,
-      "vue.config.js": null,
+      "babel.config.js": "module.exports = require('config-babel')",
+      "vue.config.js": "module.exports = require('config-vue')",
       ".eslintrc.js": null,
       ".browserslistrc": null,
       "README.md": null

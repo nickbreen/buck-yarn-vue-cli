@@ -14,15 +14,16 @@ module.exports = (api, options, rootOptions) => {
             .filter(([file, content]) => "version" !== file)
             .forEach(([file, content]) => {
                 if (null === content && !files[file]) {
-                    api.exitLog(`Cannot delete ${file}, does not exist`, 'warn')
+                    api.exitLog(`Cannot suppress creation of ${file}, not defined`, 'warn')
                 } else if (null === content) {
-                    api.exitLog(`Suppressed creation of ${file}`, 'info')
+                    api.exitLog(`Suppressing creation of ${file}`, 'info')
                     api.postProcessFiles(postFiles => delete postFiles[file])
                 } else if (fs.existsSync(api.resolve(file))) {
                     api.exitLog(`Refusing to overwrite ${file}`, 'warn')
                 } else {
+                    const wasFileAlreadyDefined = !!files[file]
                     files[file] = render(content, rootOptions)
-                    api.exitLog(`Wrote ${bytes(files[file])} bytes to ${file}`, 'info')
+                    api.exitLog(`${wasFileAlreadyDefined ? 'Rewriting' : 'Writing'} ${bytes(files[file])} bytes to ${file}`, wasFileAlreadyDefined ? 'warn' : 'info')
                 }
             });
     });

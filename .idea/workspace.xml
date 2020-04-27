@@ -27,32 +27,36 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="b199685c-7cec-49ed-9e71-f2e2d3ea6cc5" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/packages/hello-world/.gitignore" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/packages/hello-world/BUCK" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/packages/hello-world/package.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/packages/hello-world/src/HelloWorld.vue" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/packages/ui/.gitignore" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/packages/ui/BUCK" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/packages/ui/package.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/packages/ui/public/favicon.ico" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/packages/ui/public/index.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/packages/ui/src/App.vue" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/packages/ui/src/assets/logo.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/packages/ui/src/main.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/jsLibraryMappings.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/jsLibraryMappings.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/packages/config-babel/package.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/packages/config-vue/package.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/packages/config-vue/vue.config.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/packages/config-webpack/package.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/packages/config-webpack/webpack.config.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/packages/ui/babel.config.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/packages/ui/vue.config.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.browserslistrc" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.eslintrc.js" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/BUCK" beforeDir="false" afterPath="$PROJECT_DIR$/BUCK" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/buck.defs" beforeDir="false" afterPath="$PROJECT_DIR$/buck.defs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.pnp.js" beforeDir="false" afterPath="$PROJECT_DIR$/.pnp.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/babel.config.js" beforeDir="false" afterPath="$PROJECT_DIR$/packages/config-babel/babel.config.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/packages/preset.json" beforeDir="false" afterPath="$PROJECT_DIR$/packages/preset.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/webpack.config.js" beforeDir="false" afterPath="$PROJECT_DIR$/webpack.config.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/packages/ui/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/packages/ui/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/packages/vue-cli-plugin-files/generator.js" beforeDir="false" afterPath="$PROJECT_DIR$/packages/vue-cli-plugin-files/generator.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/webpack.config.js" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/yarn.lock" beforeDir="false" afterPath="$PROJECT_DIR$/yarn.lock" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/yarn.sh" beforeDir="false" afterPath="$PROJECT_DIR$/yarn.sh" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="package.json" />
+      </list>
+    </option>
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -74,6 +78,7 @@
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="javascript.nodejs.core.library.configured.version" value="13.0.0-nightly20190802452b393c1f" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="node.js.detected.package.eslint" value="true" />
     <property name="node.js.path.for.package.eslint" value="project" />
     <property name="node.js.selected.package.eslint" value="(autodetect)" />
@@ -83,8 +88,17 @@
     <option name="SHOW_DIALOG" value="false" />
   </component>
   <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$" />
+      <recent name="$PROJECT_DIR$/packages/ui" />
+      <recent name="$PROJECT_DIR$/packages" />
+    </key>
     <key name="MoveFile.RECENT_KEYS">
-      <recent name="$PROJECT_DIR$/packages/hello-world/src" />
+      <recent name="$PROJECT_DIR$/packages/config-babel" />
+      <recent name="$PROJECT_DIR$/" />
+      <recent name="$PROJECT_DIR$/packages/ui" />
+      <recent name="$PROJECT_DIR$/packages/vue-cli-plugin-files" />
+      <recent name="$PROJECT_DIR$/packages/config-webpack" />
     </key>
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -129,7 +143,8 @@
     <MESSAGE value="named vue modules" />
     <MESSAGE value="remove test modules" />
     <MESSAGE value="use an external module in an app" />
-    <option name="LAST_COMMIT_MESSAGE" value="use an external module in an app" />
+    <MESSAGE value="WIP building a library as a library - not necessary for 'apps' to use yet as they can use the sources as 'source dependencies'" />
+    <option name="LAST_COMMIT_MESSAGE" value="WIP building a library as a library - not necessary for 'apps' to use yet as they can use the sources as 'source dependencies'" />
   </component>
   <component name="WindowStateProjectService">
     <state x="1724" y="925" width="1353" height="382" key="#Custom_Plugin_Repositories" timestamp="1587712722145">
@@ -140,18 +155,38 @@
       <screen x="0" y="54" width="3840" height="2106" />
     </state>
     <state x="1115" y="389" width="1600" height="1452" key="#Plugins/0.54.3840.2106@0.54.3840.2106" timestamp="1587712801599" />
-    <state x="1062" y="228" width="1705" height="1634" key="CommitChangelistDialog2" timestamp="1587713463314">
+    <state x="1062" y="214" width="1705" height="1634" key="CommitChangelistDialog2" timestamp="1587728112919">
       <screen x="0" y="54" width="3840" height="2106" />
     </state>
-    <state x="1062" y="228" width="1705" height="1634" key="CommitChangelistDialog2/0.54.3840.2106@0.54.3840.2106" timestamp="1587713463314" />
-    <state x="1115" y="559" width="1600" height="1084" key="Vcs.Push.Dialog.v2" timestamp="1587711612124">
+    <state x="1062" y="214" width="1705" height="1634" key="CommitChangelistDialog2/0.54.3840.2106@0.54.3840.2106" timestamp="1587728112919" />
+    <state width="3750" height="552" key="GridCell.Tab.0.bottom" timestamp="1587974074489">
       <screen x="0" y="54" width="3840" height="2106" />
     </state>
-    <state x="1115" y="559" width="1600" height="1084" key="Vcs.Push.Dialog.v2/0.54.3840.2106@0.54.3840.2106" timestamp="1587711612124" />
-    <state x="1498" y="370" width="834" height="1489" key="com.intellij.openapi.editor.actions.MultiplePasteAction$ClipboardContentChooser" timestamp="1587720234494">
+    <state width="3750" height="552" key="GridCell.Tab.0.bottom/0.54.3840.2106@0.54.3840.2106" timestamp="1587974074489" />
+    <state width="3750" height="552" key="GridCell.Tab.0.center" timestamp="1587974074488">
       <screen x="0" y="54" width="3840" height="2106" />
     </state>
-    <state x="1498" y="370" width="834" height="1489" key="com.intellij.openapi.editor.actions.MultiplePasteAction$ClipboardContentChooser/0.54.3840.2106@0.54.3840.2106" timestamp="1587720234494" />
+    <state width="3750" height="552" key="GridCell.Tab.0.center/0.54.3840.2106@0.54.3840.2106" timestamp="1587974074488" />
+    <state width="3750" height="552" key="GridCell.Tab.0.left" timestamp="1587974074487">
+      <screen x="0" y="54" width="3840" height="2106" />
+    </state>
+    <state width="3750" height="552" key="GridCell.Tab.0.left/0.54.3840.2106@0.54.3840.2106" timestamp="1587974074487" />
+    <state width="3750" height="552" key="GridCell.Tab.0.right" timestamp="1587974074489">
+      <screen x="0" y="54" width="3840" height="2106" />
+    </state>
+    <state width="3750" height="552" key="GridCell.Tab.0.right/0.54.3840.2106@0.54.3840.2106" timestamp="1587974074489" />
+    <state x="1433" y="441" width="964" height="1292" key="RollbackChangesDialog" timestamp="1587971546499">
+      <screen x="0" y="54" width="3840" height="2106" />
+    </state>
+    <state x="1433" y="441" width="964" height="1292" key="RollbackChangesDialog/0.54.3840.2106@0.54.3840.2106" timestamp="1587971546499" />
+    <state x="1115" y="545" width="1600" height="1084" key="Vcs.Push.Dialog.v2" timestamp="1587728117580">
+      <screen x="0" y="54" width="3840" height="2106" />
+    </state>
+    <state x="1115" y="545" width="1600" height="1084" key="Vcs.Push.Dialog.v2/0.54.3840.2106@0.54.3840.2106" timestamp="1587728117580" />
+    <state x="1498" y="342" width="834" height="1547" key="com.intellij.openapi.editor.actions.MultiplePasteAction$ClipboardContentChooser" timestamp="1587971707329">
+      <screen x="0" y="54" width="3840" height="2106" />
+    </state>
+    <state x="1498" y="342" width="834" height="1547" key="com.intellij.openapi.editor.actions.MultiplePasteAction$ClipboardContentChooser/0.54.3840.2106@0.54.3840.2106" timestamp="1587971707329" />
     <state x="1201" y="52" width="1433" height="2556" key="search.everywhere.popup" timestamp="1587712642007">
       <screen x="0" y="54" width="3840" height="2106" />
     </state>

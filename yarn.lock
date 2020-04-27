@@ -3350,6 +3350,25 @@ __metadata:
   languageName: node
   linkType: hard
 
+"app@workspace:packages/app":
+  version: 0.0.0-use.local
+  resolution: "app@workspace:packages/app"
+  dependencies:
+    "@vue/cli-plugin-babel": ~4.3.0
+    "@vue/cli-plugin-eslint": ~4.3.0
+    "@vue/cli-service": ~4.3.0
+    babel-eslint: ^10.1.0
+    core-js: ^3.6.4
+    eslint: ^6.7.2
+    eslint-plugin-vue: ^6.2.2
+    sass: ^1.26.3
+    sass-loader: ^8.0.2
+    vue: ^2.6.11
+    vue-cli-plugin-files: latest
+    vue-template-compiler: ^2.6.11
+  languageName: unknown
+  linkType: soft
+
 "aproba@npm:^1.0.3, aproba@npm:^1.1.1":
   version: 1.2.0
   resolution: "aproba@npm:1.2.0"
@@ -3988,8 +4007,10 @@ __metadata:
   dependencies:
     "@vue/cli": 4.3.1
     json: 9.0.6
-  peerDependencies:
     supports-color: "*"
+  dependenciesMeta:
+    supports-color:
+      optional: true
   languageName: unknown
   linkType: soft
 
@@ -4969,6 +4990,12 @@ __metadata:
   languageName: node
   linkType: hard
 
+"config-babel@*, config-babel@workspace:packages/config-babel":
+  version: 0.0.0-use.local
+  resolution: "config-babel@workspace:packages/config-babel"
+  languageName: unknown
+  linkType: soft
+
 "config-chain@npm:^1.1.11":
   version: 1.1.12
   resolution: "config-chain@npm:1.1.12"
@@ -4978,6 +5005,18 @@ __metadata:
   checksum: 2/caf4b96491c2ea6fc5e6e23cebc526040cf21779ffc544c705a21b788f7dc3d34bc439878dcdfae8c15830052be55d62b26acada13da1236142d3efc5b4329be
   languageName: node
   linkType: hard
+
+"config-vue@*, config-vue@workspace:packages/config-vue":
+  version: 0.0.0-use.local
+  resolution: "config-vue@workspace:packages/config-vue"
+  languageName: unknown
+  linkType: soft
+
+"config-webpack@workspace:packages/config-webpack":
+  version: 0.0.0-use.local
+  resolution: "config-webpack@workspace:packages/config-webpack"
+  languageName: unknown
+  linkType: soft
 
 "configstore@npm:^3.0.0":
   version: 3.1.2
@@ -13941,6 +13980,15 @@ resolve@^1.12.0:
   languageName: node
   linkType: hard
 
+"supports-color@npm:*, supports-color@npm:^7.0.0, supports-color@npm:^7.1.0":
+  version: 7.1.0
+  resolution: "supports-color@npm:7.1.0"
+  dependencies:
+    has-flag: ^4.0.0
+  checksum: 2/6130f36b2a71f73014a6ef306bbaa5415d8daa5c0294082762a0505e4fb6800b8a9d037b60ed54f0c69cdfc37860034047d6004481c21f22dd43151b5e9334f0
+  languageName: node
+  linkType: hard
+
 "supports-color@npm:^2.0.0":
   version: 2.0.0
   resolution: "supports-color@npm:2.0.0"
@@ -13963,15 +14011,6 @@ resolve@^1.12.0:
   dependencies:
     has-flag: ^3.0.0
   checksum: 2/86821571295ad9f808d5e0149f13c2b0ca6faaf1325c427b369e6f4b2b1e4759046b7a4ea0e3c3c7f2546035fa2fb0d6a90f31c6c4f751eaedbcdc1b983a08cc
-  languageName: node
-  linkType: hard
-
-"supports-color@npm:^7.0.0, supports-color@npm:^7.1.0":
-  version: 7.1.0
-  resolution: "supports-color@npm:7.1.0"
-  dependencies:
-    has-flag: ^4.0.0
-  checksum: 2/6130f36b2a71f73014a6ef306bbaa5415d8daa5c0294082762a0505e4fb6800b8a9d037b60ed54f0c69cdfc37860034047d6004481c21f22dd43151b5e9334f0
   languageName: node
   linkType: hard
 
@@ -14589,6 +14628,8 @@ typescript@~3.8.3:
     "@vue/cli-plugin-eslint": ~4.3.0
     "@vue/cli-service": ~4.3.0
     babel-eslint: ^10.1.0
+    config-babel: "*"
+    config-vue: "*"
     core-js: ^3.6.4
     eslint: ^6.7.2
     eslint-plugin-vue: ^6.2.2
@@ -14596,7 +14637,7 @@ typescript@~3.8.3:
     sass: ^1.26.3
     sass-loader: ^8.0.2
     vue: ^2.6.11
-    vue-cli-plugin-files: "workspace:*"
+    vue-cli-plugin-files: "*"
     vue-template-compiler: ^2.6.11
   languageName: unknown
   linkType: soft

@@ -14,24 +14,27 @@
   "resolutions": {
     "vue-cli-plugin-files": "workspace:*"
   },
-  "peerDependencies": {
+  "optionalDependencies": {
     "supports-color": "*"
   },
-  "webpack": {
-      "rules": [
-        {
-          "loader": "babel-loader",
-          "options": {
-            "rootMode": "upward",
-            "cacheDirectory": false
-          }
-        },
-        {
-          "loader": "eslint-loader",
-          "options": {
-            "cache": false
-          }
-        }
-      ]
+  "browserslist": [
+    "last 2 versions"
+  ],
+  "eslintConfig": {
+    "env": {
+      "node": true
+    },
+    "extends": [
+      "plugin:vue/recommended",
+      "eslint:recommended"
+    ],
+    "parserOptions": {
+      "parser": "babel-eslint"
+    },
+    "root": true,
+    "rules": {
+      "no-console": "error",
+      "no-debugger": "error"
     }
+  }
 }
