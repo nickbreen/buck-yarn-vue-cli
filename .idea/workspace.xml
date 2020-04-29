@@ -27,23 +27,12 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="b199685c-7cec-49ed-9e71-f2e2d3ea6cc5" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/packages/config-babel/package.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/packages/config-vue/package.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/packages/config-vue/vue.config.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/packages/config-webpack/package.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/packages/config-webpack/webpack.config.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/packages/ui/babel.config.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/packages/ui/vue.config.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.browserslistrc" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.eslintrc.js" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.pnp.js" beforeDir="false" afterPath="$PROJECT_DIR$/.pnp.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/babel.config.js" beforeDir="false" afterPath="$PROJECT_DIR$/packages/config-babel/babel.config.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/packages/preset.json" beforeDir="false" afterPath="$PROJECT_DIR$/packages/preset.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/packages/ui/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/packages/ui/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/packages/vue-cli-plugin-files/generator.js" beforeDir="false" afterPath="$PROJECT_DIR$/packages/vue-cli-plugin-files/generator.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/webpack.config.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/BUCK" beforeDir="false" afterPath="$PROJECT_DIR$/BUCK" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/buck.defs" beforeDir="false" afterPath="$PROJECT_DIR$/buck.defs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/packages/config-vue/vue.config.js" beforeDir="false" afterPath="$PROJECT_DIR$/packages/config-vue/vue.config.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/packages/vue-cli-plugin-files/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/packages/vue-cli-plugin-files/index.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/yarn.lock" beforeDir="false" afterPath="$PROJECT_DIR$/yarn.lock" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -78,7 +67,7 @@
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="javascript.nodejs.core.library.configured.version" value="13.0.0-nightly20190802452b393c1f" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/packages/hello-world" />
     <property name="node.js.detected.package.eslint" value="true" />
     <property name="node.js.path.for.package.eslint" value="project" />
     <property name="node.js.selected.package.eslint" value="(autodetect)" />
@@ -89,6 +78,7 @@
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/packages/hello-world" />
       <recent name="$PROJECT_DIR$" />
       <recent name="$PROJECT_DIR$/packages/ui" />
       <recent name="$PROJECT_DIR$/packages" />
@@ -144,7 +134,8 @@
     <MESSAGE value="remove test modules" />
     <MESSAGE value="use an external module in an app" />
     <MESSAGE value="WIP building a library as a library - not necessary for 'apps' to use yet as they can use the sources as 'source dependencies'" />
-    <option name="LAST_COMMIT_MESSAGE" value="WIP building a library as a library - not necessary for 'apps' to use yet as they can use the sources as 'source dependencies'" />
+    <MESSAGE value="global babel and vue config via trickery" />
+    <option name="LAST_COMMIT_MESSAGE" value="global babel and vue config via trickery" />
   </component>
   <component name="WindowStateProjectService">
     <state x="1724" y="925" width="1353" height="382" key="#Custom_Plugin_Repositories" timestamp="1587712722145">
@@ -155,10 +146,10 @@
       <screen x="0" y="54" width="3840" height="2106" />
     </state>
     <state x="1115" y="389" width="1600" height="1452" key="#Plugins/0.54.3840.2106@0.54.3840.2106" timestamp="1587712801599" />
-    <state x="1062" y="214" width="1705" height="1634" key="CommitChangelistDialog2" timestamp="1587728112919">
+    <state x="1062" y="200" width="1705" height="1634" key="CommitChangelistDialog2" timestamp="1587975986508">
       <screen x="0" y="54" width="3840" height="2106" />
     </state>
-    <state x="1062" y="214" width="1705" height="1634" key="CommitChangelistDialog2/0.54.3840.2106@0.54.3840.2106" timestamp="1587728112919" />
+    <state x="1062" y="200" width="1705" height="1634" key="CommitChangelistDialog2/0.54.3840.2106@0.54.3840.2106" timestamp="1587975986508" />
     <state width="3750" height="552" key="GridCell.Tab.0.bottom" timestamp="1587974074489">
       <screen x="0" y="54" width="3840" height="2106" />
     </state>

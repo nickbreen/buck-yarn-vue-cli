@@ -3350,25 +3350,6 @@ __metadata:
   languageName: node
   linkType: hard
 
-"app@workspace:packages/app":
-  version: 0.0.0-use.local
-  resolution: "app@workspace:packages/app"
-  dependencies:
-    "@vue/cli-plugin-babel": ~4.3.0
-    "@vue/cli-plugin-eslint": ~4.3.0
-    "@vue/cli-service": ~4.3.0
-    babel-eslint: ^10.1.0
-    core-js: ^3.6.4
-    eslint: ^6.7.2
-    eslint-plugin-vue: ^6.2.2
-    sass: ^1.26.3
-    sass-loader: ^8.0.2
-    vue: ^2.6.11
-    vue-cli-plugin-files: latest
-    vue-template-compiler: ^2.6.11
-  languageName: unknown
-  linkType: soft
-
 "aproba@npm:^1.0.3, aproba@npm:^1.1.1":
   version: 1.2.0
   resolution: "aproba@npm:1.2.0"
@@ -5009,6 +4990,8 @@ __metadata:
 "config-vue@*, config-vue@workspace:packages/config-vue":
   version: 0.0.0-use.local
   resolution: "config-vue@workspace:packages/config-vue"
+  dependencies:
+    webpack: 4.43.0
   languageName: unknown
   linkType: soft
 

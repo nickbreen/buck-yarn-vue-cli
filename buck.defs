@@ -30,7 +30,7 @@ def vue(
         out = 'dist',
         tests = [':lint', ':test'],
         srcs = all_srcs,
-        cmd = '$(exe :yarn-workspace) build --dest "${OUT}"'
+        cmd = 'CACHE_DIR="${TMP}" $(exe :yarn-workspace) build --dest "${OUT}"'
     )
 
     genrule(
