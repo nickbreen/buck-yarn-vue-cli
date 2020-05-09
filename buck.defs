@@ -8,7 +8,7 @@ def vue(
     command_alias(
         name = 'yarn-workspace',
         exe = '//:yarn',
-        args = ['-w', get_base_path()]
+        args = [ '-w', get_base_path() ]
     )
 
     genrule(

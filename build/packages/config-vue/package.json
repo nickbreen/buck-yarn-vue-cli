@@ -1,0 +1,8 @@
+{
+  "name": "config-vue",
+  "version": "1.0.0",
+  "main": "vue.config.js",
+  "dependencies": {
+    "find-cache-dir": "3.3.1"
+  }
+}

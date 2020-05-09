@@ -19,21 +19,17 @@
     <select>
       <path>
         <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
-        <item name="REMOTE_ROOT" type="e8cecc67:BranchNodeDescriptor" />
-        <item name="GROUP_NODE:origin" type="e8cecc67:BranchNodeDescriptor" />
-        <item name="BRANCH:origin/master" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="LOCAL_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="BRANCH:master" type="e8cecc67:BranchNodeDescriptor" />
       </path>
     </select>
   </component>
   <component name="ChangeListManager">
     <list default="true" id="b199685c-7cec-49ed-9e71-f2e2d3ea6cc5" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.pnp.js" beforeDir="false" afterPath="$PROJECT_DIR$/.pnp.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/BUCK" beforeDir="false" afterPath="$PROJECT_DIR$/BUCK" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/buck.defs" beforeDir="false" afterPath="$PROJECT_DIR$/buck.defs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/packages/config-vue/vue.config.js" beforeDir="false" afterPath="$PROJECT_DIR$/packages/config-vue/vue.config.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/packages/vue-cli-plugin-files/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/packages/vue-cli-plugin-files/index.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/yarn.lock" beforeDir="false" afterPath="$PROJECT_DIR$/yarn.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/yarn.sh" beforeDir="false" afterPath="$PROJECT_DIR$/yarn.sh" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -52,6 +48,7 @@
   </component>
   <component name="PackageJsonUpdateNotifier">
     <dismissed value="$PROJECT_DIR$/packages/ui/package.json" />
+    <dismissed value="$PROJECT_DIR$/shared/ui/packages/hello-world/package.json" />
   </component>
   <component name="ProjectId" id="1ayIrtOVJJ9UKmhV0DHeXU2zrB9" />
   <component name="ProjectLevelVcsManager" settingsEditedManually="true">
@@ -72,23 +69,24 @@
     <property name="node.js.path.for.package.eslint" value="project" />
     <property name="node.js.selected.package.eslint" value="(autodetect)" />
     <property name="nodejs_package_manager_path" value="yarn" />
+    <property name="settings.editor.selected.configurable" value="project.propVCSSupport.Mappings" />
   </component>
   <component name="ReadonlyStatusHandler">
     <option name="SHOW_DIALOG" value="false" />
   </component>
   <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/build/packages" />
+      <recent name="$PROJECT_DIR$/shared/ui/packages" />
+      <recent name="$PROJECT_DIR$/packages/config-babel" />
+      <recent name="$PROJECT_DIR$/" />
+      <recent name="$PROJECT_DIR$/packages/ui" />
+    </key>
     <key name="CopyFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$/packages/hello-world" />
       <recent name="$PROJECT_DIR$" />
       <recent name="$PROJECT_DIR$/packages/ui" />
       <recent name="$PROJECT_DIR$/packages" />
-    </key>
-    <key name="MoveFile.RECENT_KEYS">
-      <recent name="$PROJECT_DIR$/packages/config-babel" />
-      <recent name="$PROJECT_DIR$/" />
-      <recent name="$PROJECT_DIR$/packages/ui" />
-      <recent name="$PROJECT_DIR$/packages/vue-cli-plugin-files" />
-      <recent name="$PROJECT_DIR$/packages/config-webpack" />
     </key>
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -101,6 +99,17 @@
           <value>
             <State>
               <option name="BEK_SORT_TYPE" value="1" />
+              <option name="FILTERS">
+                <map>
+                  <entry key="branch">
+                    <value>
+                      <list>
+                        <option value="master" />
+                      </list>
+                    </value>
+                  </entry>
+                </map>
+              </option>
             </State>
           </value>
         </entry>
@@ -129,13 +138,19 @@
     <option name="oldMeFiltersMigrated" value="true" />
   </component>
   <component name="VcsManagerConfiguration">
+    <ignored-roots>
+      <path value="$PROJECT_DIR$/buck-out/gen/lib/vue-cli/__vue.sh__/cells/__default__" />
+      <path value="$PROJECT_DIR$/buck-out/gen/lib/yarn/__yarn.sh__/cells/__default__" />
+    </ignored-roots>
     <MESSAGE value="build with buck" />
     <MESSAGE value="named vue modules" />
     <MESSAGE value="remove test modules" />
     <MESSAGE value="use an external module in an app" />
     <MESSAGE value="WIP building a library as a library - not necessary for 'apps' to use yet as they can use the sources as 'source dependencies'" />
     <MESSAGE value="global babel and vue config via trickery" />
-    <option name="LAST_COMMIT_MESSAGE" value="global babel and vue config via trickery" />
+    <MESSAGE value="avoid node_modules/.cache, instead use ${CACHE_DIR}" />
+    <MESSAGE value="update yarn to .33 &#10;tweak configs/dependencies to satisfy yarn" />
+    <option name="LAST_COMMIT_MESSAGE" value="update yarn to .33 &#10;tweak configs/dependencies to satisfy yarn" />
   </component>
   <component name="WindowStateProjectService">
     <state x="1724" y="925" width="1353" height="382" key="#Custom_Plugin_Repositories" timestamp="1587712722145">
@@ -146,10 +161,14 @@
       <screen x="0" y="54" width="3840" height="2106" />
     </state>
     <state x="1115" y="389" width="1600" height="1452" key="#Plugins/0.54.3840.2106@0.54.3840.2106" timestamp="1587712801599" />
-    <state x="1062" y="200" width="1705" height="1634" key="CommitChangelistDialog2" timestamp="1587975986508">
+    <state x="1062" y="172" width="1705" height="1634" key="CommitChangelistDialog2" timestamp="1588988437989">
       <screen x="0" y="54" width="3840" height="2106" />
     </state>
-    <state x="1062" y="200" width="1705" height="1634" key="CommitChangelistDialog2/0.54.3840.2106@0.54.3840.2106" timestamp="1587975986508" />
+    <state x="1062" y="172" width="1705" height="1634" key="CommitChangelistDialog2/0.54.3840.2106@0.54.3840.2106" timestamp="1588988437989" />
+    <state x="100" y="40" width="3640" height="1920" key="DiffContextDialog" timestamp="1588988563110">
+      <screen x="0" y="54" width="3840" height="2106" />
+    </state>
+    <state x="100" y="40" width="3640" height="1920" key="DiffContextDialog/0.54.3840.2106@0.54.3840.2106" timestamp="1588988563110" />
     <state width="3750" height="552" key="GridCell.Tab.0.bottom" timestamp="1587974074489">
       <screen x="0" y="54" width="3840" height="2106" />
     </state>
@@ -170,10 +189,18 @@
       <screen x="0" y="54" width="3840" height="2106" />
     </state>
     <state x="1433" y="441" width="964" height="1292" key="RollbackChangesDialog/0.54.3840.2106@0.54.3840.2106" timestamp="1587971546499" />
-    <state x="1115" y="545" width="1600" height="1084" key="Vcs.Push.Dialog.v2" timestamp="1587728117580">
+    <state x="903" y="371" width="2033" height="1488" key="SettingsEditor" timestamp="1588984692629">
       <screen x="0" y="54" width="3840" height="2106" />
     </state>
-    <state x="1115" y="545" width="1600" height="1084" key="Vcs.Push.Dialog.v2/0.54.3840.2106@0.54.3840.2106" timestamp="1587728117580" />
+    <state x="903" y="371" width="2033" height="1488" key="SettingsEditor/0.54.3840.2106@0.54.3840.2106" timestamp="1588984692629" />
+    <state width="1042" height="796" key="SwitcherDM" timestamp="1588985857336">
+      <screen x="0" y="54" width="3840" height="2106" />
+    </state>
+    <state width="1042" height="796" key="SwitcherDM/0.54.3840.2106@0.54.3840.2106" timestamp="1588985857336" />
+    <state x="1115" y="517" width="1600" height="1084" key="Vcs.Push.Dialog.v2" timestamp="1588988528553">
+      <screen x="0" y="54" width="3840" height="2106" />
+    </state>
+    <state x="1115" y="517" width="1600" height="1084" key="Vcs.Push.Dialog.v2/0.54.3840.2106@0.54.3840.2106" timestamp="1588988528553" />
     <state x="1498" y="342" width="834" height="1547" key="com.intellij.openapi.editor.actions.MultiplePasteAction$ClipboardContentChooser" timestamp="1587971707329">
       <screen x="0" y="54" width="3840" height="2106" />
     </state>

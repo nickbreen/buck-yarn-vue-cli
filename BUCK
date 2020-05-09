@@ -4,6 +4,8 @@ sh_binary(
     resources = [
         'package.json',
         'packages',
+        'shared/ui/packages',
+        'build/packages',
         '.pnp.js',
         '.yarn',
         'yarn.lock',

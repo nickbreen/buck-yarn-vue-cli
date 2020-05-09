@@ -12,6 +12,9 @@
     "hello-world": "*",
     "vue": "^2.6.11"
   },
+  "files": [
+    "dist/*"
+  ],
   "devDependencies": {
     "@vue/cli-plugin-babel": "~4.3.0",
     "@vue/cli-plugin-eslint": "~4.3.0",

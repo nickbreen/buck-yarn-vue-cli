@@ -9,11 +9,10 @@
     "pnp": true
   },
   "workspaces": [
-    "packages/*"
+    "build/packages/*",
+    "packages/*",
+    "shared/ui/packages/*"
   ],
-  "resolutions": {
-    "vue-cli-plugin-files": "workspace:*"
-  },
   "optionalDependencies": {
     "supports-color": "*"
   },
