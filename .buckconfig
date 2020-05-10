@@ -5,6 +5,4 @@ javac = opt/java/openjdk-11/bin/javac
 
 [project]
 ignore = .git, opt
-
-[alias]
-yarn = //lib/yarn:yarn
+ide = intellij

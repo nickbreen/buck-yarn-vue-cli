@@ -99,8 +99,8 @@ by buck.
 
 # Configuring ESLint, Babel, & Webpack
 
-ESLint's [configuration][10] can be root-project-level, we shall also make this the "root" ESLint configuration file.
-See `.eslint.js`.
+ESLint's [configuration][10] can be root-project-level, for now it can be expressed as JSON, so it's in the 
+root package.json.
 
 Babel's [configuration][11] can be mono-repo friendly too, but it is [a bit trickier][15], so we need to configure 
 [webpack][12]. See `babel.config.js` and `webpack.config.js`
@@ -128,6 +128,7 @@ Babel's [configuration][11] can be mono-repo friendly too, but it is [a bit tric
 - [ ] add websocket client
 - [ ] add web workers: Shared(WebSocket) -> Dedicated -> Vuex -> Vue
 - [ ] add a Disruptor!
+- [ ] add `buck:` as a [yarn plugin][19] to resolve to other buck targets/outputs
 
 # Host, chroot, or Container?
 
@@ -161,3 +162,4 @@ Tooling/dependencies could be deployed into the chroot instead of ./opt/.
 [16]: https://lerna.js.org/
 [17]: https://classic.yarnpkg.com/en/docs/workspaces
 [18]: https://github.com/slanatech/vue-monorepo-boilerplate
+[19]: https://yarnpkg.com/advanced/plugin-tutorial

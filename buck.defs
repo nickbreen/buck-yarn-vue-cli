@@ -1,28 +1,29 @@
-def vue(
+def yarn(
     name,
     srcs = ['**'],
-    srcs_exclude = ['BUCK', 'node_modules']):
+    srcs_exclude = ['BUCK', 'node_modules'],
+    deps = []):
 
     all_srcs = glob(srcs, exclude = srcs_exclude) + ['package.json']
 
     command_alias(
-        name = 'yarn-workspace',
+        name = 'yarn',
         exe = '//:yarn',
-        args = [ '-w', get_base_path() ]
+        args = [ get_base_path() ]
     )
 
     genrule(
         name = 'test',
         out = 'test.log',
         srcs = all_srcs,
-        cmd = '$(exe :yarn-workspace) test > ${OUT}',
+        cmd = '$(exe :yarn) test > ${OUT}',
     )
 
     genrule(
         name = 'lint',
         out = 'lint.log',
         srcs = all_srcs,
-        cmd = '$(exe :yarn-workspace) lint > ${OUT}',
+        cmd = '$(exe :yarn) lint > ${OUT}',
     )
 
     genrule(
@@ -30,13 +31,13 @@ def vue(
         out = 'dist',
         tests = [':lint', ':test'],
         srcs = all_srcs,
-        cmd = 'CACHE_DIR="${TMP}" $(exe :yarn-workspace) build --dest "${OUT}"'
+        cmd = 'CACHE_DIR="${TMP}" $(exe :yarn) build --dest "${OUT}"'
     )
 
     genrule(
         name = 'pack',
         out = 'package.tgz',
         srcs = all_srcs + [':build'],
-        cmd = '$(exe :yarn-workspace) pack --out "${OUT}"'
+        cmd = '$(exe :yarn) pack --out "${OUT}"'
     )
 

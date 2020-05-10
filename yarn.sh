@@ -2,44 +2,12 @@
 
 set -euo pipefail
 
-declare workspace_path workspace_name
-
-while getopts :w:D opt; do
-  case ${opt} in
-  D) set -x;;
-  w) workspace_path="$OPTARG" ;;
-  :)
-    echo "Missing argument to $OPTARG"
-    exit 64
-    ;;
-  \?)
-    echo "Unknown argument $OPTARG"
-    exit 64
-    ;;
-  *)
-    echo "Unimplemented argument $OPTARG"
-    exit 64
-    ;;
-  esac
-done
-shift $((OPTIND-1))
-
-if [[ $- == *x* ]]
-then
-  echo SHELLOPTS:$-
-  echo "\$PWD=${PWD}"
-  ls -lA "${PWD}"
-  echo "\$BUCK_PROJECT_ROOT=${BUCK_PROJECT_ROOT}"
-  ls -lA "${BUCK_PROJECT_ROOT}"
-  echo "\$BUCK_DEFAULT_RUNTIME_RESOURCES=${BUCK_DEFAULT_RUNTIME_RESOURCES}"
-  ls -lA "${BUCK_DEFAULT_RUNTIME_RESOURCES}"
-fi >&2
-
+# The resources are also made available in a tree structure that mirrors their locations in the source and buck-out
+# trees. The environment variable $BUCK_PROJECT_ROOT specifies a directory that contains all the resources, laid out
+# in their locations relative to the original buck project root.
+# -- https://buck.build/rule/sh_binary.html#resources
+#
+# Note: this means that *all* workspaces must be specified in its sh_binary resources.
 cd "${BUCK_PROJECT_ROOT}"
 
-if [ "${workspace_path-}" ]
-then
-  workspace_name=$(yarn workspaces list --json | yarn json -ga -c "this.location==='${workspace_path}'" .name)
-fi
-
-yarn ${workspace_name:+workspace "${workspace_name}"} "$@"
+exec yarn "$@"
