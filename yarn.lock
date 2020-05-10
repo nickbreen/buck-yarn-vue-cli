@@ -15106,7 +15106,7 @@ typescript@~3.8.3:
   languageName: node
   linkType: hard
 
-"vue-cli-plugin-files@*, vue-cli-plugin-files@workspace:*, vue-cli-plugin-files@workspace:build/packages/vue-cli-plugin-files":
+"vue-cli-plugin-files@workspace:*, vue-cli-plugin-files@workspace:build/packages/vue-cli-plugin-files":
   version: 0.0.0-use.local
   resolution: "vue-cli-plugin-files@workspace:build/packages/vue-cli-plugin-files"
   languageName: unknown

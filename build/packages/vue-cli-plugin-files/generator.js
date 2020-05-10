@@ -8,13 +8,16 @@ function render(template, data)
     return template.replace(/(\\?)(\$\{(\w+)\})/g, (_, esc, expr, prop) => esc ? expr : data[prop]);
 }
 
+// Generators are automatically added as plugins, local ones are added using the absolute path so get
+// duplicated! Identify that invocation with options._isPreset
+// Also, why is api.invoking is always false?
 module.exports = (api, options, rootOptions) => {
     return api.render(files => {
-        Object.entries(options)
-            .filter(([file, content]) => "version" !== file)
+        Object.entries(options.files || {})
             .forEach(([file, content]) => {
                 if (null === content && !files[file]) {
-                    api.exitLog(`Cannot suppress creation of ${file}, not defined`, 'warn')
+                    api.exitLog(`Deferring deletion of ${file}`, 'info')
+                    api.onCreateComplete(() => fs.unlink(file))
                 } else if (null === content) {
                     api.exitLog(`Suppressing creation of ${file}`, 'info')
                     api.postProcessFiles(postFiles => delete postFiles[file])

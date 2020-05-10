@@ -13,6 +13,9 @@
     "packages/*",
     "shared/ui/packages/*"
   ],
+  "resolutions": {
+    "vue-cli-plugin-files": "workspace:*"
+  },
   "optionalDependencies": {
     "supports-color": "*"
   },

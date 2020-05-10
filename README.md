@@ -78,8 +78,7 @@ All node modules must be in a Yarn "workspace", these must be listed (or glob'd)
 
 1. Create a new project with Vue CLI.
 
-       cd packages
-       yarn vue create app
+       yarn vue create --preset build/packages/vue-cli-plugin-files app
 
    Note the `tgz` files for each dependency added in `.yarn/cache`!
 
@@ -128,7 +127,8 @@ Babel's [configuration][11] can be mono-repo friendly too, but it is [a bit tric
 - [ ] add websocket client
 - [ ] add web workers: Shared(WebSocket) -> Dedicated -> Vuex -> Vue
 - [ ] add a Disruptor!
-- [ ] add `buck:` as a [yarn plugin][19] to resolve to other buck targets/outputs
+- [x] ~~add `buck:` as a [yarn plugin][19] to resolve to other buck targets/outputs~~ no need
+- [ ] [babel][20] (and webpack) config in root with `rootMode: upwards`
 
 # Host, chroot, or Container?
 
@@ -163,3 +163,4 @@ Tooling/dependencies could be deployed into the chroot instead of ./opt/.
 [17]: https://classic.yarnpkg.com/en/docs/workspaces
 [18]: https://github.com/slanatech/vue-monorepo-boilerplate
 [19]: https://yarnpkg.com/advanced/plugin-tutorial
+[20]: https://github.com/babel/babel/pull/8660
