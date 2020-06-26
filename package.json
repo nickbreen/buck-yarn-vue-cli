@@ -3,7 +3,12 @@
   "private": true,
   "devDependencies": {
     "@vue/cli": "4.3.1",
-    "json": "9.0.6"
+    "@yarnpkg/builder": "2.0.0-rc.23",
+    "json": "9.0.6",
+    "typescript": "3.9.5"
+  },
+  "scripts": {
+    "info": "pwd; ls; env | grep HELLO_WORLD"
   },
   "installConfig": {
     "pnp": true
@@ -11,7 +16,8 @@
   "workspaces": [
     "build/packages/*",
     "packages/*",
-    "shared/ui/packages/*"
+    "shared/ui/packages/*",
+    "yarn/buck"
   ],
   "resolutions": {
     "vue-cli-plugin-files": "workspace:*"

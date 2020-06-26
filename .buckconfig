@@ -6,3 +6,6 @@ javac = opt/java/openjdk-11/bin/javac
 [project]
 ignore = .git, opt
 ide = intellij
+
+[alias]
+    yarn = //:yarn.js

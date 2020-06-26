@@ -1,30 +1,33 @@
 yarn_requisites = [
-    '.yarn/',
     '.pnp.js',
     '.yarnrc.yml',
     'package.json',
-    'yarn.lock'
+    'yarn.lock',
 ]
-
-# Yarn requires all its workspaces to resolves any workspace packages; list them *all* here.
-yarn_workspaces = [
-    'build/packages',
-    'packages',
-    'shared/ui/packages',
-]
-# We *could* load workspaces from package.json - though it does not work well with globs or nested
-# workspaces or when there are files (i.e. BUCK) in the workspace (e.g. build/packages/preset.json)!
-# import json
-# add_build_file_dep('//package.json')
-# with open('package.json') as package_json:
-#     manifest = json.load(package_json)
-#     yarn_workspaces = glob(manifest['workspaces'])
 
 sh_binary(
-    name = 'yarn',
-    main = 'yarn.sh',
-    resources = yarn_requisites + yarn_workspaces,
-    visibility = [
-        'PUBLIC'
-    ]
+    name = 'yarn.js',
+    main = '.yarn/releases/yarn-2.0.0-rc.36.js',
+    resources = yarn_requisites,
 )
+
+# Use this alias in BUCK files or defs to delegate to yarn.
+command_alias(
+    name = 'yarn',
+    exe = ':yarn.js',
+    visibility = [ 'PUBLIC' ]
+)
+
+# Wrapper script for building node modules with yarn in buck, it runs (somewhere, thou shalt not care where) in the buck-out directory
+#sh_binary(
+#    name = 'yarn.sh',
+#    main = 'yarn.sh',
+#    resources = [':yarn.js'],
+#)
+
+#command_alias(
+#    name = 'yarn',
+#    exe = ':yarn.sh',
+#    args = ['$(exe :yarn.js)'], # first arg is the delegated yarn executable
+#    visibility = [ 'PUBLIC' ]
+#)
