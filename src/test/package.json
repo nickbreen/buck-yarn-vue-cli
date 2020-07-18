@@ -1,0 +1,13 @@
+{
+  "name": "test",
+  "private": true,
+  "devDependencies": {
+  },
+  "installConfig": {
+    "pnp": true
+  },
+  "workspaces": [
+    "app",
+    "lib"
+  ]
+}

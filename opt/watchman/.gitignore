@@ -1,0 +1,5 @@
+*
+!.gitignore
+!Makefile
+!watchman-4.9.0.tar.gz
+

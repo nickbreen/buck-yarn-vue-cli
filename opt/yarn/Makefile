@@ -10,12 +10,12 @@ ifeq ($(bindir),)
 endif
 
 version ?= 1.22.4
-berry ?= 2.0.0-rc.32
+berry ?= 2.1.1
 
 install: yarn-$(version).js
 	@chmod +x $<
 	@ln -nvfrs $< $(bindir)/yarn
-	node $< set version berry || node $< set version latest || node $< set version $(berry)
+	yarn set version $(berry) || yarn set version berry && yarn set version $(berry)
 
 yarn-%.js: url = https://github.com/yarnpkg/yarn/releases/download/v$(*)/yarn-$(*).js
 yarn-%.js:

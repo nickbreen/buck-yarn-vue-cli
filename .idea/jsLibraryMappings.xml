@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="JavaScriptLibraryMappings">
+    <excludedPredefinedLibrary name="Dependencies from buck-out/gen/__yarn__/runtime_resources/__default__/package.json" />
+  </component>
+</project>

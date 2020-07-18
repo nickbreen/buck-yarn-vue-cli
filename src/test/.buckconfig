@@ -1,0 +1,8 @@
+# This file defines the root of your BUCK project.
+
+[project]
+ignore = .git, opt
+ide = intellij
+
+[buildfile]
+includes = buck.defs

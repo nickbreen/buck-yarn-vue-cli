@@ -1,3 +1,0 @@
-include_defs('//buck.defs')
-
-yarn(name = 'hello-world')

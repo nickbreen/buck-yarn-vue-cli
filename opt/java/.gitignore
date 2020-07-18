@@ -1,0 +1,8 @@
+*
+!.gitignore
+!Makefile
+!Makefile.java
+!openjdk-8u41-b04-linux-x64-14_jan_2020.tar.gz
+!openjdk-8u41-b04-linux-x64-14_jan_2020.tar.gz.md5
+!openjdk-11+28_linux-x64_bin.tar.gz
+!openjdk-11+28_linux-x64_bin.tar.gz.sha256

@@ -1,0 +1,10 @@
+{
+  "name": "an-app",
+  "dependencies": {
+    "a-lib": "buck://lib:lib"
+  },
+  "resolutions": {
+    "a-lib": "buck://lib:lib"
+  },
+  "main": "index.js"
+}

@@ -1,2 +1,5 @@
-opt/*/*.tar.?z filter=lfs diff=lfs merge=lfs -text
-opt/buck/*.pex filter=lfs diff=lfs merge=lfs -text
+opt/node/node-v12.16.1-linux-x64.tar.xz filter=lfs diff=lfs merge=lfs -text
+opt/java/openjdk-8u41-b04-linux-x64-14_jan_2020.tar.gz filter=lfs diff=lfs merge=lfs -text
+opt/java/openjdk-11+28_linux-x64_bin.tar.gz filter=lfs diff=lfs merge=lfs -text
+opt/watchman/watchman-4.9.0.tar.gz filter=lfs diff=lfs merge=lfs -text
+opt/buck/buck-v2019.10.17.01.pex filter=lfs diff=lfs merge=lfs -text
