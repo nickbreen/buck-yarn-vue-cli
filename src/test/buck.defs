@@ -1,29 +1,46 @@
+yarn_prerequisites = {
+    '.yarn': '//:yarn_dir',
+    '.pnp.js': '//:yarn_pnp',
+    '.yarnrc.yml': '//:yarn_rc',
+    'yarn.lock': '//:yarn_lock',
+}
+
 def yarn(
     name,
     srcs = ['**'],
     srcs_exclude = ['BUCK', 'node_modules'],
     deps = []):
 
-    all_srcs = glob(srcs, exclude = srcs_exclude) + ['package.json']
+    all_srcs = yarn_prerequisites.copy()
+    all_srcs.update({k:k for k in glob(srcs, exclude = srcs_exclude) + ['package.json']})
 
-    command_alias(
-        name = 'yarn',
-        exe = '//:yarn',
-        args = [ get_base_path() ]
+    genrule(
+        name = 'pack',
+        out = 'package.tgz',
+        srcs = all_srcs,
+        cmd = 'yarn pack --out "${OUT}"'
     )
+
+    # what about zip_file()? instead of pack (tgz)?
+
+def vue(
+    name,
+    srcs = ['**'],
+    srcs_exclude = ['BUCK', 'node_modules'],
+    deps = []):
 
     genrule(
         name = 'test',
         out = 'test.log',
         srcs = all_srcs,
-        cmd = '$(exe :yarn) test > ${OUT}',
+        cmd = 'yarn test > ${OUT}',
     )
 
     genrule(
         name = 'lint',
         out = 'lint.log',
         srcs = all_srcs,
-        cmd = '$(exe :yarn) lint > ${OUT}',
+        cmd = 'yarn lint > ${OUT}',
     )
 
     genrule(
@@ -31,13 +48,5 @@ def yarn(
         out = 'dist',
         tests = [':lint', ':test'],
         srcs = all_srcs,
-        cmd = 'CACHE_DIR="${TMP}" $(exe :yarn) build --dest "${OUT}"'
+        cmd = 'exec >&2; set -x; ls -lA "${SRCDIR}"; mkdir "${OUT}"; CACHE_DIR="${TMP}" yarn build --dest "${OUT}"'
     )
-
-    genrule(
-        name = 'pack',
-        out = 'package.tgz',
-        srcs = all_srcs + [':build'],
-        cmd = '$(exe :yarn) pack --out "${OUT}"'
-    )
-

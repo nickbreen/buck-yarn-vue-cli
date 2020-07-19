@@ -5,4 +5,4 @@ ignore = .git, opt
 ide = intellij
 
 [buildfile]
-includes = buck.defs
+includes = //buck.defs

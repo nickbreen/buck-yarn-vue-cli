@@ -1,4 +1,7 @@
 {
   "name": "a-lib",
-  "main": "index.js"
+  "main": "index.js",
+  "files": [
+    "index.js"
+  ]
 }

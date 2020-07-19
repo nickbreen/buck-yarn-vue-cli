@@ -1,33 +1,5 @@
-yarn_requisites = [
-    '.pnp.js',
-    '.yarnrc.yml',
-    'package.json',
-    'yarn.lock',
-]
-
-sh_binary(
-    name = 'yarn.js',
-    main = '.yarn/releases/yarn-2.1.1.cjs',
-    resources = yarn_requisites,
-)
-
-# Use this alias in BUCK files or defs to delegate to yarn.
-command_alias(
-    name = 'yarn',
-    exe = ':yarn.js',
-    visibility = [ 'PUBLIC' ]
-)
-
-# Wrapper script for building node modules with yarn in buck, it runs (somewhere, thou shalt not care where) in the buck-out directory
-#sh_binary(
-#    name = 'yarn.sh',
-#    main = 'yarn.sh',
-#    resources = [':yarn.js'],
-#)
-
-#command_alias(
-#    name = 'yarn',
-#    exe = ':yarn.sh',
-#    args = ['$(exe :yarn.js)'], # first arg is the delegated yarn executable
-#    visibility = [ 'PUBLIC' ]
-#)
+export_file( name = 'yarn_dir', src = '.yarn', visibility = ['PUBLIC'] )
+export_file( name = 'yarn_pnp', src = '.pnp.js', visibility = ['PUBLIC'] )
+export_file( name = 'yarn_rc', src = '.yarnrc.yml', visibility = ['PUBLIC'] )
+export_file( name = 'yarn_manifest', src = 'package.json', visibility = ['PUBLIC'] )
+export_file( name = 'yarn_lock', src = 'yarn.lock', visibility = ['PUBLIC'] )

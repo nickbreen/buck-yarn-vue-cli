@@ -1,8 +1,6 @@
 {
   "name": "test",
   "private": true,
-  "devDependencies": {
-  },
   "installConfig": {
     "pnp": true
   },
