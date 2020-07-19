@@ -1,6 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="JavaScriptLibraryMappings">
-    <excludedPredefinedLibrary name="Dependencies from buck-out/gen/__yarn__/runtime_resources/__default__/package.json" />
+    <excludedPredefinedLibrary name="Dependencies from src/test/buck-out/gen/.pnp.js/package.json" />
+    <excludedPredefinedLibrary name="Dependencies from src/test/buck-out/gen/__yarn.js__/runtime_resources/__default__/package.json" />
+    <excludedPredefinedLibrary name="Dependencies from src/test/buck-out/gen/__yarn.js__/sh_binary.w18tvDyBfs/__default__/package.json" />
+    <excludedPredefinedLibrary name="Dependencies from src/test/buck-out/gen/lib/build__srcs/package.json" />
+    <excludedPredefinedLibrary name="Dependencies from src/test/buck-out/gen/lib/pack__srcs/package.json" />
   </component>
 </project>
