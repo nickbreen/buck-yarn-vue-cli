@@ -1,10 +1,10 @@
 import {Plugin} from '@yarnpkg/core';
-import {LinkFetcher} from './LinkFetcher';
 import {BuckResolver} from './BuckResolver';
+import {BuckFetcher} from "./BuckFetcher";
 
 const plugin: Plugin = {
     resolvers: [BuckResolver],
-    fetchers: [LinkFetcher]
+    fetchers: [BuckFetcher]
 };
 
 export default plugin;

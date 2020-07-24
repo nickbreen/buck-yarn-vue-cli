@@ -46,6 +46,10 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
         "npm:2.1.0"
       ],
       [
+        "@yarnpkg/libzip",
+        "npm:2.1.0"
+      ],
+      [
         "@yarnpkg/plugin-link",
         "virtual:3a6bb999fc4d3e31f8a57f755d3daac94c774fe09c0db955384631a5212c8de37647f88cdbf348fbedd6b5a0075e14c2275d6fcef88f23069cbde47cb22cbc30#npm:2.1.0"
       ],
@@ -65,6 +69,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["@yarnpkg/builder", "virtual:3a6bb999fc4d3e31f8a57f755d3daac94c774fe09c0db955384631a5212c8de37647f88cdbf348fbedd6b5a0075e14c2275d6fcef88f23069cbde47cb22cbc30#npm:2.1.0"],
             ["@yarnpkg/core", "npm:2.1.1"],
             ["@yarnpkg/fslib", "npm:2.1.0"],
+            ["@yarnpkg/libzip", "npm:2.1.0"],
             ["@yarnpkg/plugin-link", "virtual:3a6bb999fc4d3e31f8a57f755d3daac94c774fe09c0db955384631a5212c8de37647f88cdbf348fbedd6b5a0075e14c2275d6fcef88f23069cbde47cb22cbc30#npm:2.1.0"],
             ["typescript", "patch:typescript@npm%3A3.9.7#builtin<compat/typescript>::version=3.9.7&hash=5b02a2"]
           ],
@@ -4382,6 +4387,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["@yarnpkg/builder", "virtual:3a6bb999fc4d3e31f8a57f755d3daac94c774fe09c0db955384631a5212c8de37647f88cdbf348fbedd6b5a0075e14c2275d6fcef88f23069cbde47cb22cbc30#npm:2.1.0"],
             ["@yarnpkg/core", "npm:2.1.1"],
             ["@yarnpkg/fslib", "npm:2.1.0"],
+            ["@yarnpkg/libzip", "npm:2.1.0"],
             ["@yarnpkg/plugin-link", "virtual:3a6bb999fc4d3e31f8a57f755d3daac94c774fe09c0db955384631a5212c8de37647f88cdbf348fbedd6b5a0075e14c2275d6fcef88f23069cbde47cb22cbc30#npm:2.1.0"],
             ["typescript", "patch:typescript@npm%3A3.9.7#builtin<compat/typescript>::version=3.9.7&hash=5b02a2"]
           ],

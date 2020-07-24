@@ -1,36 +1,83 @@
-import {promisify} from 'util'
-import {execFile as cbExecFile} from 'child_process'
-import {createInterface} from 'readline'
-import {Readable} from 'stream'
-import {structUtils} from '@yarnpkg/core'
+import {
+    Descriptor,
+    LinkType,
+    Locator,
+    Manifest,
+    MessageName,
+    MinimalResolveOptions,
+    miscUtils,
+    Package,
+    ResolveOptions,
+    Resolver,
+    structUtils
+} from '@yarnpkg/core'
 
-import {LinkResolver} from "./LinkResolver"
+import {descriptorPattern, locatorPattern, targetOutputs} from "./buck";
 
-const execFile = promisify(cbExecFile);
-
-export class BuckResolver extends LinkResolver {
-    supportsDescriptor(locator, opts) {
-        return locator.range.startsWith('buck:')
+export class BuckResolver implements Resolver {
+    supportsDescriptor(descriptor: Descriptor, opts: MinimalResolveOptions) {
+        return descriptorPattern.test(descriptor.range)
     }
 
-    supportsLocator(locator, opts) {
-        return locator.reference.startsWith('buck:')
+    supportsLocator(locator: Locator, opts: MinimalResolveOptions) {
+        return locatorPattern.test(locator.reference)
     }
 
-    async getCandidates(descriptor, dependencies, opts) {
-        const path = descriptor.range.slice('buck:'.length, descriptor.range.indexOf("::"))
+    shouldPersistResolution(locator: Locator, opts: MinimalResolveOptions) {
+        return false;
+    }
 
-        const {stdout} = await execFile('buck', ['targets', '--show-full-output', path])
+    bindDescriptor(descriptor: Descriptor, fromLocator: Locator, opts: MinimalResolveOptions) {
+        return structUtils.bindDescriptor(descriptor, {
+            locator: structUtils.stringifyLocator(fromLocator),
+        });
+    }
 
-        const lines = createInterface({input: stdout as unknown as Readable});
+    getResolutionDependencies(descriptor: Descriptor, opts: MinimalResolveOptions) {
+        return [];
+    }
+
+    async getCandidates(descriptor: Descriptor, dependencies, opts: ResolveOptions) {
+        const buckTarget = descriptorPattern.exec(descriptor.range);
+        opts.report.reportInfo(MessageName.UNNAMED, `Descriptor: ${descriptor.range} => ${buckTarget.groups.proto}:${buckTarget.groups.cell}//${buckTarget.groups.path}:${buckTarget.groups.rule}`)
+
+        const outputsByTarget = await targetOutputs([buckTarget.groups.target]);
 
         const candidates = []
 
-        for await (const line of lines) {
-            const [target, output] = line.split(/\s+/, 2);
-            candidates.push(structUtils.makeLocator({...descriptor, name: target}, `portal:${output}`))
+        for (const [target, output] of outputsByTarget) {
+            candidates.push(structUtils.makeLocator({...descriptor, name: target}, `buck:${output}`))
+            opts.report.reportInfo(MessageName.UNNAMED, `Candidate: ${target} => ${output}`)
         }
 
         return candidates
+    }
+
+    async resolve(locator: Locator, opts: ResolveOptions): Promise<Package> {
+        if (!opts.fetchOptions)
+            throw new Error(`Assertion failed: This resolver cannot be used unless a fetcher is configured`);
+
+        const packageFetch = await opts.fetchOptions.fetcher.fetch(locator, opts.fetchOptions);
+
+        const manifest = await miscUtils.releaseAfterUseAsync(async () => {
+            return await Manifest.find(packageFetch.prefixPath, {baseFs: packageFetch.packageFs});
+        }, packageFetch.releaseFs);
+
+        return {
+            ...locator,
+
+            version: manifest.version || `0.0.0`,
+
+            languageName: opts.project.configuration.get(`defaultLanguageName`),
+            linkType: LinkType.SOFT,
+
+            dependencies: new Map([...manifest.dependencies, ...manifest.devDependencies]),
+            peerDependencies: manifest.peerDependencies,
+
+            dependenciesMeta: manifest.dependenciesMeta,
+            peerDependenciesMeta: manifest.peerDependenciesMeta,
+
+            bin: manifest.bin,
+        };
     }
 }

@@ -7,11 +7,13 @@
     "@yarnpkg/builder": "^2.1.0",
     "@yarnpkg/core": "^2.1.0",
     "@yarnpkg/fslib": "^2.1.0",
+    "@yarnpkg/libzip": "^2.1.0",
     "@yarnpkg/plugin-link": "^2.1.0",
     "typescript": "^3.9.5"
   },
   "scripts": {
-    "build": "builder build plugin --no-minify"
+    "build": "builder build plugin --no-minify",
+    "test": "run build && ( cd src/test && yarn plugin import ../../bundles/@yarnpkg/plugin-buck.js  && yarn install )"
   },
   "installConfig": {
     "pnp": true

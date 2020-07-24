@@ -3,5 +3,8 @@
   "main": "index.js",
   "files": [
     "index.js"
-  ]
+  ],
+  "dependencies": {
+    "a-lib": "buck://lib:pack"
+  }
 }
