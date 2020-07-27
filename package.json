@@ -7,8 +7,6 @@
     "@yarnpkg/builder": "^2.1.0",
     "@yarnpkg/core": "^2.1.0",
     "@yarnpkg/fslib": "^2.1.0",
-    "@yarnpkg/libzip": "^2.1.0",
-    "@yarnpkg/plugin-link": "^2.1.0",
     "typescript": "^3.9.5"
   },
   "scripts": {

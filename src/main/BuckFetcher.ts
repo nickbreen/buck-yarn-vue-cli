@@ -3,16 +3,16 @@ import {promisify} from 'util'
 import {
     Fetcher,
     FetchOptions,
-    MinimalFetchOptions,
+    hashUtils,
     Locator,
-    structUtils,
-    tgzUtils,
     MessageName,
-    miscUtils, hashUtils
+    MinimalFetchOptions,
+    miscUtils,
+    structUtils,
+    tgzUtils
 } from '@yarnpkg/core'
 import {locatorPattern} from "./buck"
-import {LazyFS, NodeFS, PortablePath, ppath, ZipFS} from "@yarnpkg/fslib";
-import {getLibzipPromise} from '@yarnpkg/libzip';
+import {LazyFS, PortablePath, ppath, ZipFS} from "@yarnpkg/fslib";
 
 const readFile = promisify(cbReadFile)
 

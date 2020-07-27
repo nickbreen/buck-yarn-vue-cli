@@ -39,10 +39,6 @@
       "npm:2.1.0"
     ],
     [
-      "@yarnpkg/plugin-link",
-      "virtual:3a6bb999fc4d3e31f8a57f755d3daac94c774fe09c0db955384631a5212c8de37647f88cdbf348fbedd6b5a0075e14c2275d6fcef88f23069cbde47cb22cbc30#npm:2.1.0"
-    ],
-    [
       "typescript",
       "patch:typescript@npm%3A3.9.7#builtin<compat/typescript>::version=3.9.7&hash=5b02a2"
     ]
@@ -72,10 +68,6 @@
               [
                 "@yarnpkg/fslib",
                 "npm:2.1.0"
-              ],
-              [
-                "@yarnpkg/plugin-link",
-                "virtual:3a6bb999fc4d3e31f8a57f755d3daac94c774fe09c0db955384631a5212c8de37647f88cdbf348fbedd6b5a0075e14c2275d6fcef88f23069cbde47cb22cbc30#npm:2.1.0"
               ],
               [
                 "typescript",
@@ -1827,7 +1819,7 @@
               ],
               [
                 "@yarnpkg/plugin-link",
-                "virtual:3a6bb999fc4d3e31f8a57f755d3daac94c774fe09c0db955384631a5212c8de37647f88cdbf348fbedd6b5a0075e14c2275d6fcef88f23069cbde47cb22cbc30#npm:2.1.0"
+                "virtual:f0f86e3c6f6313100eb454223a5d7831b21a8dd5043314f7baa42362fff43af0dc0cbbd04f2ea99c13d8fddc98a54df199e858b5eac8d33dc35119de054521df#npm:2.1.0"
               ],
               [
                 "@yarnpkg/plugin-node-modules",
@@ -2469,13 +2461,13 @@
       "@yarnpkg/plugin-link",
       [
         [
-          "virtual:3a6bb999fc4d3e31f8a57f755d3daac94c774fe09c0db955384631a5212c8de37647f88cdbf348fbedd6b5a0075e14c2275d6fcef88f23069cbde47cb22cbc30#npm:2.1.0",
+          "virtual:f0f86e3c6f6313100eb454223a5d7831b21a8dd5043314f7baa42362fff43af0dc0cbbd04f2ea99c13d8fddc98a54df199e858b5eac8d33dc35119de054521df#npm:2.1.0",
           {
-            "packageLocation": "./.yarn/$$virtual/@yarnpkg-plugin-link-virtual-9dbbfc4914/0/cache/@yarnpkg-plugin-link-npm-2.1.0-75ba6b5095-d7c809b37d.zip/node_modules/@yarnpkg/plugin-link/",
+            "packageLocation": "./.yarn/$$virtual/@yarnpkg-plugin-link-virtual-fce5e41bbe/0/cache/@yarnpkg-plugin-link-npm-2.1.0-75ba6b5095-d7c809b37d.zip/node_modules/@yarnpkg/plugin-link/",
             "packageDependencies": [
               [
                 "@yarnpkg/plugin-link",
-                "virtual:3a6bb999fc4d3e31f8a57f755d3daac94c774fe09c0db955384631a5212c8de37647f88cdbf348fbedd6b5a0075e14c2275d6fcef88f23069cbde47cb22cbc30#npm:2.1.0"
+                "virtual:f0f86e3c6f6313100eb454223a5d7831b21a8dd5043314f7baa42362fff43af0dc0cbbd04f2ea99c13d8fddc98a54df199e858b5eac8d33dc35119de054521df#npm:2.1.0"
               ],
               [
                 "@yarnpkg/core",
@@ -10008,10 +10000,6 @@
               [
                 "@yarnpkg/fslib",
                 "npm:2.1.0"
-              ],
-              [
-                "@yarnpkg/plugin-link",
-                "virtual:3a6bb999fc4d3e31f8a57f755d3daac94c774fe09c0db955384631a5212c8de37647f88cdbf348fbedd6b5a0075e14c2275d6fcef88f23069cbde47cb22cbc30#npm:2.1.0"
               ],
               [
                 "typescript",
