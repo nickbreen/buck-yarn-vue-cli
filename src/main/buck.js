@@ -1,5 +1,6 @@
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
+exports.targetOutputs = exports.descriptorPattern = exports.locatorPattern = void 0;
 const child_process_1 = require("child_process");
 const readline_1 = require("readline");
 exports.locatorPattern = /(?<proto>buck):(?<package>.+)/;

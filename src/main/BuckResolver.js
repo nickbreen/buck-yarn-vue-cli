@@ -1,5 +1,6 @@
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
+exports.BuckResolver = void 0;
 const core_1 = require("@yarnpkg/core");
 const buck_1 = require("./buck");
 class BuckResolver {
