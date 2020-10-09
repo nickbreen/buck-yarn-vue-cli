@@ -1,5 +1,5 @@
 export default class Library {
     description() {
-        return "I am a library"
+        return "I am library 1"
     }
 }

@@ -14,14 +14,35 @@ def yarn(
     all_srcs = yarn_prerequisites.copy()
     all_srcs.update({k:k for k in glob(srcs, exclude = srcs_exclude) + ['package.json']})
 
+    dep_args = [arg for dep in deps for arg in ['-n', '%s'  % dep, '-l', '$(location %s)' % dep]]
+
     genrule(
-        name = 'pack',
-        out = 'package.tgz',
-        srcs = all_srcs,
-        cmd = 'yarn pack --out "${OUT}"'
+        name = 'deps',
+        out = 'deps.txt',
+        cmd = '$(exe //:write-deps) ' + ' '.join(dep_args) + ' > "${OUT}"'
     )
 
-    # what about zip_file()? instead of pack (tgz)?
+    genrule(
+        name = 'pack',
+        out = '%s.tgz' % name,
+        srcs = all_srcs,
+        cmd = 'yarn install && yarn pack --out "${OUT}"'
+    )
+
+    genrule(
+        name = 'unpack',
+        out = 'unpack',
+        srcs = [':pack'],
+        cmd = 'mkdir "${OUT}" && for src in ${SRCS}; do tar vxf "${src}" --directory "${OUT}" --strip-components 1; done | tee /dev/stderr',
+        visibility = ['PUBLIC']
+    )
+
+    genrule(
+        name = 'zip',
+        out = '%s.zip' % name,
+        srcs = [':unpack'],
+        cmd = 'for src in ${SRCS}; do cd "${src}" && zip -r "${OUT}"; done; unzip -t ${OUT} > /dev/stderr'
+    )
 
 def vue(
     name,

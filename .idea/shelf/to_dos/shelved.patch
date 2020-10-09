@@ -1,0 +1,247 @@
+Index: src/test/app/package.json
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+>{\n  \"name\": \"an-app\",\n  \"main\": \"index.js\",\n  \"files\": [\n    \"index.js\"\n  ]\n}\n
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+--- src/test/app/package.json	(revision 5c623f70d185e1505c7105a28b626fa1fbfee799)
++++ src/test/app/package.json	(date 1595213634427)
+@@ -3,5 +3,8 @@
+   "main": "index.js",
+   "files": [
+     "index.js"
+-  ]
++  ],
++  "dependencies": {
++    "lib": "buck://lib:pack"
++  }
+ }
+Index: src/test/buck.defs
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+>yarn_prerequisites = {\n    '.yarn': '//:yarn_dir',\n    '.pnp.js': '//:yarn_pnp',\n    '.yarnrc.yml': '//:yarn_rc',\n    'yarn.lock': '//:yarn_lock',\n}\n\ndef yarn(\n    name,\n    srcs = ['**'],\n    srcs_exclude = ['BUCK', 'node_modules'],\n    deps = []):\n\n    all_srcs = yarn_prerequisites.copy()\n    all_srcs.update({k:k for k in glob(srcs, exclude = srcs_exclude) + ['package.json']})\n\n    genrule(\n        name = 'pack',\n        out = 'package.tgz',\n        srcs = all_srcs,\n        cmd = 'yarn pack --out \"${OUT}\"'\n    )\n\n    # what about zip_file()? instead of pack (tgz)?\n\ndef vue(\n    name,\n    srcs = ['**'],\n    srcs_exclude = ['BUCK', 'node_modules'],\n    deps = []):\n\n    genrule(\n        name = 'test',\n        out = 'test.log',\n        srcs = all_srcs,\n        cmd = 'yarn test > ${OUT}',\n    )\n\n    genrule(\n        name = 'lint',\n        out = 'lint.log',\n        srcs = all_srcs,\n        cmd = 'yarn lint > ${OUT}',\n    )\n\n    genrule(\n        name = 'build',\n        out = 'dist',\n        tests = [':lint', ':test'],\n        srcs = all_srcs,\n        cmd = 'exec >&2; set -x; ls -lA \"${SRCDIR}\"; mkdir \"${OUT}\"; CACHE_DIR=\"${TMP}\" yarn build --dest \"${OUT}\"'\n    )\n
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+--- src/test/buck.defs	(revision 5c623f70d185e1505c7105a28b626fa1fbfee799)
++++ src/test/buck.defs	(date 1595213590703)
+@@ -1,6 +1,7 @@
+ yarn_prerequisites = {
+     '.yarn': '//:yarn_dir',
+     '.pnp.js': '//:yarn_pnp',
++    '.pnp.data.json': '//:yarn_pnp_data',
+     '.yarnrc.yml': '//:yarn_rc',
+     'yarn.lock': '//:yarn_lock',
+ }
+Index: src/main/BuckResolver.ts
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+>import {promisify} from 'util'\nimport {execFile as cbExecFile} from 'child_process'\nimport {createInterface} from 'readline'\nimport {Readable} from 'stream'\nimport {structUtils} from '@yarnpkg/core'\n\nimport {LinkResolver} from \"./LinkResolver\"\n\nconst execFile = promisify(cbExecFile);\n\nexport class BuckResolver extends LinkResolver {\n    supportsDescriptor(locator, opts) {\n        return locator.range.startsWith('buck:')\n    }\n\n    supportsLocator(locator, opts) {\n        return locator.reference.startsWith('buck:')\n    }\n\n    async getCandidates(descriptor, dependencies, opts) {\n        const path = descriptor.range.slice('buck:'.length, descriptor.range.indexOf(\"::\"))\n\n        const {stdout} = await execFile('buck', ['targets', '--show-full-output', path])\n\n        const lines = createInterface({input: stdout as unknown as Readable});\n\n        const candidates = []\n\n        for await (const line of lines) {\n            const [target, output] = line.split(/\\s+/, 2);\n            candidates.push(structUtils.makeLocator({...descriptor, name: target}, `portal:${output}`))\n        }\n\n        return candidates\n    }\n}
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+--- src/main/BuckResolver.ts	(revision 5c623f70d185e1505c7105a28b626fa1fbfee799)
++++ src/main/BuckResolver.ts	(date 1595215882966)
+@@ -1,36 +1,65 @@
+-import {promisify} from 'util'
+-import {execFile as cbExecFile} from 'child_process'
+-import {createInterface} from 'readline'
+-import {Readable} from 'stream'
+-import {structUtils} from '@yarnpkg/core'
++import {
++    Descriptor,
++    LinkType,
++    Locator, Manifest,
++    MinimalResolveOptions,
++    miscUtils,
++    ResolveOptions, Resolver,
++    structUtils
++} from '@yarnpkg/core'
++
++const supports_regexp = /^buck:/;
+ 
+-import {LinkResolver} from "./LinkResolver"
++export class BuckResolver implements Resolver {
++    supportsDescriptor(descriptor: Descriptor, opts: MinimalResolveOptions) {
++        return supports_regexp.test(descriptor.range);
++    }
+ 
+-const execFile = promisify(cbExecFile);
++    supportsLocator(locator: Locator, opts: MinimalResolveOptions) {
++        return supports_regexp.test(locator.reference);
++    }
+ 
+-export class BuckResolver extends LinkResolver {
+-    supportsDescriptor(locator, opts) {
+-        return locator.range.startsWith('buck:')
++    shouldPersistResolution(locator: Locator, opts: MinimalResolveOptions) {
++        return true;
+     }
+ 
+-    supportsLocator(locator, opts) {
+-        return locator.reference.startsWith('buck:')
++    bindDescriptor(descriptor: Descriptor, fromLocator: Locator, opts: MinimalResolveOptions) {
++        return descriptor;
+     }
+ 
+-    async getCandidates(descriptor, dependencies, opts) {
+-        const path = descriptor.range.slice('buck:'.length, descriptor.range.indexOf("::"))
++    getResolutionDependencies(descriptor: Descriptor, opts: MinimalResolveOptions) {
++        return [];
++    }
+ 
+-        const {stdout} = await execFile('buck', ['targets', '--show-full-output', path])
++    async getCandidates(descriptor: Descriptor, dependencies: unknown, opts: ResolveOptions) {
++        return [structUtils.convertDescriptorToLocator(descriptor)];
++    }
+ 
+-        const lines = createInterface({input: stdout as unknown as Readable});
++    async resolve(locator: Locator, opts: ResolveOptions) {
++        if (!opts.fetchOptions)
++            throw new Error(`Assertion failed: This resolver cannot be used unless a fetcher is configured`);
+ 
+-        const candidates = []
++        const packageFetch = await opts.fetchOptions.fetcher.fetch(locator, opts.fetchOptions);
+ 
+-        for await (const line of lines) {
+-            const [target, output] = line.split(/\s+/, 2);
+-            candidates.push(structUtils.makeLocator({...descriptor, name: target}, `portal:${output}`))
+-        }
++        const manifest = await miscUtils.releaseAfterUseAsync(async () => {
++            return await Manifest.find(packageFetch.prefixPath, {baseFs: packageFetch.packageFs});
++        }, packageFetch.releaseFs);
++
++        return {
++            ...locator,
++
++            version: manifest.version || `0.0.0`,
++
++            languageName: opts.project.configuration.get(`defaultLanguageName`),
++            linkType: LinkType.HARD,
++
++            dependencies: manifest.dependencies,
++            peerDependencies: manifest.peerDependencies,
+ 
+-        return candidates
++            dependenciesMeta: manifest.dependenciesMeta,
++            peerDependenciesMeta: manifest.peerDependenciesMeta,
++
++            bin: manifest.bin,
++        };
+     }
+-}
+\ No newline at end of file
++}
+Index: src/main/index.ts
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+>import {Plugin} from '@yarnpkg/core';\nimport {LinkFetcher} from './LinkFetcher';\nimport {BuckResolver} from './BuckResolver';\n\nconst plugin: Plugin = {\n    resolvers: [BuckResolver],\n    fetchers: [LinkFetcher]\n};\n\nexport default plugin;\n\n
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+--- src/main/index.ts	(revision 5c623f70d185e1505c7105a28b626fa1fbfee799)
++++ src/main/index.ts	(date 1595215850098)
+@@ -1,11 +1,10 @@
+ import {Plugin} from '@yarnpkg/core';
+-import {LinkFetcher} from './LinkFetcher';
+ import {BuckResolver} from './BuckResolver';
++import {BuckFetcher} from "./BuckFetcher";
+ 
+ const plugin: Plugin = {
+     resolvers: [BuckResolver],
+-    fetchers: [LinkFetcher]
++    fetchers: [BuckFetcher]
+ };
+ 
+ export default plugin;
+-
+Index: src/test/BUCK
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+>export_file( name = 'yarn_dir', src = '.yarn', visibility = ['PUBLIC'] )\nexport_file( name = 'yarn_pnp', src = '.pnp.js', visibility = ['PUBLIC'] )\nexport_file( name = 'yarn_rc', src = '.yarnrc.yml', visibility = ['PUBLIC'] )\nexport_file( name = 'yarn_manifest', src = 'package.json', visibility = ['PUBLIC'] )\nexport_file( name = 'yarn_lock', src = 'yarn.lock', visibility = ['PUBLIC'] )\n
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+--- src/test/BUCK	(revision 5c623f70d185e1505c7105a28b626fa1fbfee799)
++++ src/test/BUCK	(date 1595213577622)
+@@ -1,5 +1,6 @@
+ export_file( name = 'yarn_dir', src = '.yarn', visibility = ['PUBLIC'] )
+ export_file( name = 'yarn_pnp', src = '.pnp.js', visibility = ['PUBLIC'] )
++export_file( name = 'yarn_pnp_data', src = '.pnp.data.json', visibility = ['PUBLIC'] )
+ export_file( name = 'yarn_rc', src = '.yarnrc.yml', visibility = ['PUBLIC'] )
+ export_file( name = 'yarn_manifest', src = 'package.json', visibility = ['PUBLIC'] )
+ export_file( name = 'yarn_lock', src = 'yarn.lock', visibility = ['PUBLIC'] )
+Index: src/main/BuckFetcher.ts
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+--- src/main/BuckFetcher.ts	(date 1595215882958)
++++ src/main/BuckFetcher.ts	(date 1595215882958)
+@@ -0,0 +1,64 @@
++import {Fetcher, FetchOptions, MinimalFetchOptions} from '@yarnpkg/core';
++import {Locator}                                    from '@yarnpkg/core';
++import {httpUtils, structUtils, tgzUtils}           from '@yarnpkg/core';
++
++const supports_regexp = /^buck:/;
++
++export class BuckFetcher implements Fetcher {
++  supports(locator: Locator, opts: MinimalFetchOptions) {
++    return supports_regexp.test(locator.reference);
++  }
++
++  getLocalPath(locator: Locator, opts: FetchOptions) {
++    return null; // TODO
++  }
++
++  async fetch(locator: Locator, opts: FetchOptions) {
++    const expectedChecksum = opts.checksums.get(locator.locatorHash) || null;
++
++    const [packageFs, releaseFs, checksum] = await opts.cache.fetchPackageFromCache(locator, expectedChecksum, {
++      onHit: () => opts.report.reportCacheHit(locator),
++      onMiss: () => opts.report.reportCacheMiss(locator, `${structUtils.prettyLocator(opts.project.configuration, locator)} can't be found in the cache and will be fetched from the remote server`),
++      loader: () => this.fetchFromNetwork(locator, opts),
++      skipIntegrityCheck: opts.skipIntegrityCheck,
++    });
++
++    return {
++      packageFs,
++      releaseFs,
++      prefixPath: structUtils.getIdentVendorPath(locator),
++      checksum,
++    };
++  }
++
++  async fetchFromNetwork(locator: Locator, opts: FetchOptions) {
++    const sourceBuffer = await httpUtils.get(locator.reference, {
++      configuration: opts.project.configuration,
++    });
++
++    return await tgzUtils.convertToZip(sourceBuffer, {
++      compressionLevel: opts.project.configuration.get(`compressionLevel`),
++      prefixPath: structUtils.getIdentVendorPath(locator),
++      stripComponents: 1,
++    });
++  }
++}
++
++/*
++
++
++        const path = descriptor.range.slice('buck:'.length, descriptor.range.indexOf("::"))
++
++        const {stdout} = await execFile('buck', ['targets', '--show-full-output', path])
++
++        const lines = createInterface({input: stdout as unknown as Readable});
++
++        const candidates = []
++
++        for await (const line of lines) {
++            const [target, output] = line.split(/\s+/, 2);
++            candidates.push(structUtils.makeLocator({...descriptor, name: target}, `portal:${output}`))
++        }
++
++        return candidates
++ */
+\ No newline at end of file

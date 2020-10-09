@@ -1,0 +1,1 @@
+yarn( name = 'lib2', deps = ['//lib1:dist'] )

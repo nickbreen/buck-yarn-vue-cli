@@ -1,10 +1,8 @@
 {
-  "name": "an-app",
+  "name": "app",
   "main": "index.js",
+  "type": "module",
   "files": [
     "index.js"
-  ],
-  "dependencies": {
-    "a-lib": "buck://lib:pack"
-  }
+  ]
 }

@@ -12,8 +12,5 @@
   "scripts": {
     "build": "builder build plugin --no-minify",
     "test": "run build && ( cd src/test && yarn plugin import ../../bundles/@yarnpkg/plugin-buck.js  && yarn install )"
-  },
-  "installConfig": {
-    "pnp": true
   }
 }

@@ -1,11 +1,9 @@
 {
   "name": "test",
   "private": true,
-  "installConfig": {
-    "pnp": true
-  },
   "workspaces": [
     "app",
-    "lib"
+    "lib1",
+    "lib2"
   ]
 }

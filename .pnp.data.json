@@ -21,28 +21,7 @@
       ]
     ]
   ],
-  "fallbackPool": [
-    [
-      "@types/node",
-      "npm:12.12.50"
-    ],
-    [
-      "@yarnpkg/builder",
-      "virtual:3a6bb999fc4d3e31f8a57f755d3daac94c774fe09c0db955384631a5212c8de37647f88cdbf348fbedd6b5a0075e14c2275d6fcef88f23069cbde47cb22cbc30#npm:2.1.0"
-    ],
-    [
-      "@yarnpkg/core",
-      "npm:2.1.1"
-    ],
-    [
-      "@yarnpkg/fslib",
-      "npm:2.1.0"
-    ],
-    [
-      "typescript",
-      "patch:typescript@npm%3A3.9.7#builtin<compat/typescript>::version=3.9.7&hash=5b02a2"
-    ]
-  ],
+  "fallbackPool": [],
   "locationBlacklistData": [],
   "packageRegistryData": [
     [
@@ -71,7 +50,7 @@
               ],
               [
                 "typescript",
-                "patch:typescript@npm%3A3.9.7#builtin<compat/typescript>::version=3.9.7&hash=5b02a2"
+                "patch:typescript@npm%3A3.9.7#builtin<compat/typescript>::version=3.9.7&hash=5bf698"
               ]
             ],
             "linkType": "SOFT"
@@ -569,6 +548,10 @@
             "packageDependencies": [
               [
                 "@babel/parser",
+                "npm:7.10.5"
+              ],
+              [
+                "@babel/types",
                 "npm:7.10.5"
               ]
             ],
@@ -1677,6 +1660,10 @@
                 "npm:7.10.5"
               ],
               [
+                "@types/typescript",
+                null
+              ],
+              [
                 "@yarnpkg/cli",
                 "virtual:b28b86eb757c7fcf8e6d46169cac3d59893fc46f64d00944c46ff7480368d61f18b617aa1dd397db6dd5d0f082e3c324a5e6ae6d9eeaa089e0e74aacdfa0326f#npm:2.1.1"
               ],
@@ -1710,7 +1697,7 @@
               ],
               [
                 "fork-ts-checker-webpack-plugin",
-                "npm:5.0.7"
+                "virtual:b28b86eb757c7fcf8e6d46169cac3d59893fc46f64d00944c46ff7480368d61f18b617aa1dd397db6dd5d0f082e3c324a5e6ae6d9eeaa089e0e74aacdfa0326f#npm:5.0.7"
               ],
               [
                 "semver",
@@ -1730,7 +1717,7 @@
               ],
               [
                 "typescript",
-                "patch:typescript@npm%3A3.9.7#builtin<compat/typescript>::version=3.9.7&hash=5b02a2"
+                "patch:typescript@npm%3A3.9.7#builtin<compat/typescript>::version=3.9.7&hash=5bf698"
               ],
               [
                 "val-loader",
@@ -1750,6 +1737,7 @@
               ]
             ],
             "packagePeers": [
+              "@types/typescript",
               "typescript"
             ],
             "linkType": "HARD"
@@ -1768,6 +1756,10 @@
               [
                 "@yarnpkg/cli",
                 "virtual:b28b86eb757c7fcf8e6d46169cac3d59893fc46f64d00944c46ff7480368d61f18b617aa1dd397db6dd5d0f082e3c324a5e6ae6d9eeaa089e0e74aacdfa0326f#npm:2.1.1"
+              ],
+              [
+                "@types/yarnpkg__core",
+                null
               ],
               [
                 "@yarnpkg/core",
@@ -1875,6 +1867,7 @@
               ]
             ],
             "packagePeers": [
+              "@types/yarnpkg__core",
               "@yarnpkg/core"
             ],
             "linkType": "HARD"
@@ -2125,6 +2118,14 @@
                 "virtual:f0f86e3c6f6313100eb454223a5d7831b21a8dd5043314f7baa42362fff43af0dc0cbbd04f2ea99c13d8fddc98a54df199e858b5eac8d33dc35119de054521df#npm:2.1.0"
               ],
               [
+                "@types/yarnpkg__core",
+                null
+              ],
+              [
+                "@types/yarnpkg__plugin-patch",
+                null
+              ],
+              [
                 "@yarnpkg/core",
                 "npm:2.1.1"
               ],
@@ -2134,6 +2135,8 @@
               ]
             ],
             "packagePeers": [
+              "@types/yarnpkg__core",
+              "@types/yarnpkg__plugin-patch",
               "@yarnpkg/core",
               "@yarnpkg/plugin-patch"
             ],
@@ -2153,6 +2156,14 @@
               [
                 "@yarnpkg/plugin-dlx",
                 "virtual:f0f86e3c6f6313100eb454223a5d7831b21a8dd5043314f7baa42362fff43af0dc0cbbd04f2ea99c13d8fddc98a54df199e858b5eac8d33dc35119de054521df#npm:2.1.0"
+              ],
+              [
+                "@types/yarnpkg__cli",
+                null
+              ],
+              [
+                "@types/yarnpkg__core",
+                null
               ],
               [
                 "@yarnpkg/cli",
@@ -2180,6 +2191,8 @@
               ]
             ],
             "packagePeers": [
+              "@types/yarnpkg__cli",
+              "@types/yarnpkg__core",
               "@yarnpkg/cli",
               "@yarnpkg/core"
             ],
@@ -2199,6 +2212,14 @@
               [
                 "@yarnpkg/plugin-essentials",
                 "virtual:f0f86e3c6f6313100eb454223a5d7831b21a8dd5043314f7baa42362fff43af0dc0cbbd04f2ea99c13d8fddc98a54df199e858b5eac8d33dc35119de054521df#npm:2.1.0"
+              ],
+              [
+                "@types/yarnpkg__cli",
+                null
+              ],
+              [
+                "@types/yarnpkg__core",
+                null
               ],
               [
                 "@yarnpkg/cli",
@@ -2254,6 +2275,8 @@
               ]
             ],
             "packagePeers": [
+              "@types/yarnpkg__cli",
+              "@types/yarnpkg__core",
               "@yarnpkg/cli",
               "@yarnpkg/core"
             ],
@@ -2275,6 +2298,10 @@
                 "virtual:f0f86e3c6f6313100eb454223a5d7831b21a8dd5043314f7baa42362fff43af0dc0cbbd04f2ea99c13d8fddc98a54df199e858b5eac8d33dc35119de054521df#npm:2.1.0"
               ],
               [
+                "@types/yarnpkg__core",
+                null
+              ],
+              [
                 "@yarnpkg/core",
                 "npm:2.1.1"
               ],
@@ -2288,6 +2315,7 @@
               ]
             ],
             "packagePeers": [
+              "@types/yarnpkg__core",
               "@yarnpkg/core"
             ],
             "linkType": "HARD"
@@ -2312,6 +2340,10 @@
                 "npm:7.3.1"
               ],
               [
+                "@types/yarnpkg__core",
+                null
+              ],
+              [
                 "@yarnpkg/core",
                 "npm:2.1.1"
               ],
@@ -2333,6 +2365,7 @@
               ]
             ],
             "packagePeers": [
+              "@types/yarnpkg__core",
               "@yarnpkg/core"
             ],
             "linkType": "HARD"
@@ -2353,6 +2386,14 @@
                 "virtual:f0f86e3c6f6313100eb454223a5d7831b21a8dd5043314f7baa42362fff43af0dc0cbbd04f2ea99c13d8fddc98a54df199e858b5eac8d33dc35119de054521df#npm:2.1.0"
               ],
               [
+                "@types/yarnpkg__core",
+                null
+              ],
+              [
+                "@types/yarnpkg__plugin-git",
+                null
+              ],
+              [
                 "@yarnpkg/core",
                 "npm:2.1.1"
               ],
@@ -2370,6 +2411,8 @@
               ]
             ],
             "packagePeers": [
+              "@types/yarnpkg__core",
+              "@types/yarnpkg__plugin-git",
               "@yarnpkg/core",
               "@yarnpkg/plugin-git"
             ],
@@ -2391,6 +2434,10 @@
                 "virtual:f0f86e3c6f6313100eb454223a5d7831b21a8dd5043314f7baa42362fff43af0dc0cbbd04f2ea99c13d8fddc98a54df199e858b5eac8d33dc35119de054521df#npm:2.1.0"
               ],
               [
+                "@types/yarnpkg__core",
+                null
+              ],
+              [
                 "@yarnpkg/core",
                 "npm:2.1.1"
               ],
@@ -2404,6 +2451,7 @@
               ]
             ],
             "packagePeers": [
+              "@types/yarnpkg__core",
               "@yarnpkg/core"
             ],
             "linkType": "HARD"
@@ -2422,6 +2470,14 @@
               [
                 "@yarnpkg/plugin-init",
                 "virtual:f0f86e3c6f6313100eb454223a5d7831b21a8dd5043314f7baa42362fff43af0dc0cbbd04f2ea99c13d8fddc98a54df199e858b5eac8d33dc35119de054521df#npm:2.1.0"
+              ],
+              [
+                "@types/yarnpkg__cli",
+                null
+              ],
+              [
+                "@types/yarnpkg__core",
+                null
               ],
               [
                 "@yarnpkg/cli",
@@ -2449,6 +2505,8 @@
               ]
             ],
             "packagePeers": [
+              "@types/yarnpkg__cli",
+              "@types/yarnpkg__core",
               "@yarnpkg/cli",
               "@yarnpkg/core"
             ],
@@ -2470,6 +2528,10 @@
                 "virtual:f0f86e3c6f6313100eb454223a5d7831b21a8dd5043314f7baa42362fff43af0dc0cbbd04f2ea99c13d8fddc98a54df199e858b5eac8d33dc35119de054521df#npm:2.1.0"
               ],
               [
+                "@types/yarnpkg__core",
+                null
+              ],
+              [
                 "@yarnpkg/core",
                 "npm:2.1.1"
               ],
@@ -2483,6 +2545,7 @@
               ]
             ],
             "packagePeers": [
+              "@types/yarnpkg__core",
               "@yarnpkg/core"
             ],
             "linkType": "HARD"
@@ -2501,6 +2564,14 @@
               [
                 "@yarnpkg/plugin-node-modules",
                 "virtual:f0f86e3c6f6313100eb454223a5d7831b21a8dd5043314f7baa42362fff43af0dc0cbbd04f2ea99c13d8fddc98a54df199e858b5eac8d33dc35119de054521df#npm:2.1.0"
+              ],
+              [
+                "@types/yarnpkg__cli",
+                null
+              ],
+              [
+                "@types/yarnpkg__core",
+                null
               ],
               [
                 "@yarnpkg/cli",
@@ -2552,6 +2623,8 @@
               ]
             ],
             "packagePeers": [
+              "@types/yarnpkg__cli",
+              "@types/yarnpkg__core",
               "@yarnpkg/cli",
               "@yarnpkg/core"
             ],
@@ -2571,6 +2644,10 @@
               [
                 "@yarnpkg/plugin-npm",
                 "virtual:f0f86e3c6f6313100eb454223a5d7831b21a8dd5043314f7baa42362fff43af0dc0cbbd04f2ea99c13d8fddc98a54df199e858b5eac8d33dc35119de054521df#npm:2.1.0"
+              ],
+              [
+                "@types/yarnpkg__core",
+                null
               ],
               [
                 "@yarnpkg/core",
@@ -2594,6 +2671,7 @@
               ]
             ],
             "packagePeers": [
+              "@types/yarnpkg__core",
               "@yarnpkg/core"
             ],
             "linkType": "HARD"
@@ -2612,6 +2690,22 @@
               [
                 "@yarnpkg/plugin-npm-cli",
                 "virtual:f0f86e3c6f6313100eb454223a5d7831b21a8dd5043314f7baa42362fff43af0dc0cbbd04f2ea99c13d8fddc98a54df199e858b5eac8d33dc35119de054521df#npm:2.1.0"
+              ],
+              [
+                "@types/yarnpkg__cli",
+                null
+              ],
+              [
+                "@types/yarnpkg__core",
+                null
+              ],
+              [
+                "@types/yarnpkg__plugin-npm",
+                null
+              ],
+              [
+                "@types/yarnpkg__plugin-pack",
+                null
               ],
               [
                 "@yarnpkg/cli",
@@ -2659,6 +2753,10 @@
               ]
             ],
             "packagePeers": [
+              "@types/yarnpkg__cli",
+              "@types/yarnpkg__core",
+              "@types/yarnpkg__plugin-npm",
+              "@types/yarnpkg__plugin-pack",
               "@yarnpkg/cli",
               "@yarnpkg/core",
               "@yarnpkg/plugin-npm",
@@ -2680,6 +2778,14 @@
               [
                 "@yarnpkg/plugin-pack",
                 "virtual:f0f86e3c6f6313100eb454223a5d7831b21a8dd5043314f7baa42362fff43af0dc0cbbd04f2ea99c13d8fddc98a54df199e858b5eac8d33dc35119de054521df#npm:2.1.0"
+              ],
+              [
+                "@types/yarnpkg__cli",
+                null
+              ],
+              [
+                "@types/yarnpkg__core",
+                null
               ],
               [
                 "@yarnpkg/cli",
@@ -2711,6 +2817,8 @@
               ]
             ],
             "packagePeers": [
+              "@types/yarnpkg__cli",
+              "@types/yarnpkg__core",
               "@yarnpkg/cli",
               "@yarnpkg/core"
             ],
@@ -2730,6 +2838,14 @@
               [
                 "@yarnpkg/plugin-patch",
                 "virtual:f0f86e3c6f6313100eb454223a5d7831b21a8dd5043314f7baa42362fff43af0dc0cbbd04f2ea99c13d8fddc98a54df199e858b5eac8d33dc35119de054521df#npm:2.1.0"
+              ],
+              [
+                "@types/yarnpkg__cli",
+                null
+              ],
+              [
+                "@types/yarnpkg__core",
+                null
               ],
               [
                 "@yarnpkg/cli",
@@ -2757,6 +2873,8 @@
               ]
             ],
             "packagePeers": [
+              "@types/yarnpkg__cli",
+              "@types/yarnpkg__core",
               "@yarnpkg/cli",
               "@yarnpkg/core"
             ],
@@ -2780,6 +2898,14 @@
               [
                 "@types/semver",
                 "npm:7.3.1"
+              ],
+              [
+                "@types/yarnpkg__cli",
+                null
+              ],
+              [
+                "@types/yarnpkg__core",
+                null
               ],
               [
                 "@yarnpkg/cli",
@@ -2815,6 +2941,8 @@
               ]
             ],
             "packagePeers": [
+              "@types/yarnpkg__cli",
+              "@types/yarnpkg__core",
               "@yarnpkg/cli",
               "@yarnpkg/core"
             ],
@@ -2834,6 +2962,14 @@
               [
                 "@yarnpkg/plugin-stage",
                 "virtual:4d0ec30d069981e37f4ea9bca3352c8d9996050be0a0231acfcd3722ea7a6fda2b3c38749b646dbb351f584e4ebcf89ba4c6af0eaedbafa0fea1a5285a6cba0e#npm:2.1.0"
+              ],
+              [
+                "@types/yarnpkg__cli",
+                null
+              ],
+              [
+                "@types/yarnpkg__core",
+                null
               ],
               [
                 "@yarnpkg/cli",
@@ -2857,6 +2993,8 @@
               ]
             ],
             "packagePeers": [
+              "@types/yarnpkg__cli",
+              "@types/yarnpkg__core",
               "@yarnpkg/cli",
               "@yarnpkg/core"
             ],
@@ -2908,6 +3046,14 @@
                 "virtual:4f7d9c9b01c52e9f8736e161c6f41ee0e9a86cd89f279963d90f8a6b200f4b37dd8287821bb1eacfb089361775ef6eeae3431e16c7fefa3e57831043717f4b00#npm:2.1.0"
               ],
               [
+                "@types/eslint",
+                null
+              ],
+              [
+                "@types/typescript",
+                null
+              ],
+              [
                 "@yarnpkg/core",
                 "npm:2.1.1"
               ],
@@ -2949,6 +3095,8 @@
               ]
             ],
             "packagePeers": [
+              "@types/eslint",
+              "@types/typescript",
               "eslint",
               "typescript"
             ],
@@ -2965,6 +3113,14 @@
                 "virtual:b28b86eb757c7fcf8e6d46169cac3d59893fc46f64d00944c46ff7480368d61f18b617aa1dd397db6dd5d0f082e3c324a5e6ae6d9eeaa089e0e74aacdfa0326f#npm:2.1.0"
               ],
               [
+                "@types/eslint",
+                null
+              ],
+              [
+                "@types/typescript",
+                null
+              ],
+              [
                 "@yarnpkg/core",
                 "npm:2.1.1"
               ],
@@ -3002,10 +3158,12 @@
               ],
               [
                 "typescript",
-                "patch:typescript@npm%3A3.9.7#builtin<compat/typescript>::version=3.9.7&hash=5b02a2"
+                "patch:typescript@npm%3A3.9.7#builtin<compat/typescript>::version=3.9.7&hash=5bf698"
               ]
             ],
             "packagePeers": [
+              "@types/eslint",
+              "@types/typescript",
               "eslint",
               "typescript"
             ],
@@ -3177,11 +3335,16 @@
                 "virtual:2b49db17d1e4e8854e6e7543c07eb7bc19ec9da65a1b99b9cb28e764846d419e5ecd6e057ad65249f2b928862ffd70dbf8a7c79643ccdd7c1c40cab5b59aa03f#npm:1.0.1"
               ],
               [
+                "@types/ajv",
+                null
+              ],
+              [
                 "ajv",
                 "npm:6.12.3"
               ]
             ],
             "packagePeers": [
+              "@types/ajv",
               "ajv"
             ],
             "linkType": "HARD"
@@ -3193,13 +3356,17 @@
       "ajv-keywords",
       [
         [
-          "virtual:2b49db17d1e4e8854e6e7543c07eb7bc19ec9da65a1b99b9cb28e764846d419e5ecd6e057ad65249f2b928862ffd70dbf8a7c79643ccdd7c1c40cab5b59aa03f#npm:3.5.1",
+          "virtual:b668f124277280c5cab9400d7040d66d5a7531a8f1d3407b5bc9ff5c4f110b6ef3c2c2c757681610c7110ea14ea1039f45a1f2b99c6a7a9bb9fd6d72044c79e1#npm:3.5.1",
           {
-            "packageLocation": "./.yarn/$$virtual/ajv-keywords-virtual-82675a1e33/0/cache/ajv-keywords-npm-3.5.1-9266b94c13-f91a8a5304.zip/node_modules/ajv-keywords/",
+            "packageLocation": "./.yarn/$$virtual/ajv-keywords-virtual-9ff4527c73/0/cache/ajv-keywords-npm-3.5.1-9266b94c13-f91a8a5304.zip/node_modules/ajv-keywords/",
             "packageDependencies": [
               [
                 "ajv-keywords",
-                "virtual:2b49db17d1e4e8854e6e7543c07eb7bc19ec9da65a1b99b9cb28e764846d419e5ecd6e057ad65249f2b928862ffd70dbf8a7c79643ccdd7c1c40cab5b59aa03f#npm:3.5.1"
+                "virtual:b668f124277280c5cab9400d7040d66d5a7531a8f1d3407b5bc9ff5c4f110b6ef3c2c2c757681610c7110ea14ea1039f45a1f2b99c6a7a9bb9fd6d72044c79e1#npm:3.5.1"
+              ],
+              [
+                "@types/ajv",
+                null
               ],
               [
                 "ajv",
@@ -3207,6 +3374,7 @@
               ]
             ],
             "packagePeers": [
+              "@types/ajv",
               "ajv"
             ],
             "linkType": "HARD"
@@ -3408,6 +3576,14 @@
                 "npm:7.10.5"
               ],
               [
+                "@types/babel__core",
+                null
+              ],
+              [
+                "@types/webpack",
+                null
+              ],
+              [
                 "find-cache-dir",
                 "npm:2.1.0"
               ],
@@ -3434,6 +3610,8 @@
             ],
             "packagePeers": [
               "@babel/core",
+              "@types/babel__core",
+              "@types/webpack",
               "webpack"
             ],
             "linkType": "HARD"
@@ -3679,7 +3857,7 @@
               ],
               [
                 "promise-inflight",
-                "npm:1.0.1"
+                "virtual:5c6c90d2e821c49a621166cce6a7ad53be7b46ba8751aa19ef38c8c62676f0bd88a840af9d2dab9a9b27b5ebef7e6d9ca49f6a742d29cd8db3b5c4801dc357c1#npm:1.0.1"
               ],
               [
                 "rimraf",
@@ -4341,6 +4519,10 @@
                 "virtual:057ce0190c0b5c639c735618cf777968152e76191d1fdd34a8b533cbc74e5369d962ec2680477d36b44fde211a7d0b4078bbf3a0ba3bb48562139414e8e24267#npm:4.2.0"
               ],
               [
+                "@types/supports-color",
+                null
+              ],
+              [
                 "ms",
                 "npm:2.1.2"
               ],
@@ -4350,6 +4532,7 @@
               ]
             ],
             "packagePeers": [
+              "@types/supports-color",
               "supports-color"
             ],
             "linkType": "HARD"
@@ -5097,17 +5280,29 @@
       "fork-ts-checker-webpack-plugin",
       [
         [
-          "npm:5.0.7",
+          "virtual:b28b86eb757c7fcf8e6d46169cac3d59893fc46f64d00944c46ff7480368d61f18b617aa1dd397db6dd5d0f082e3c324a5e6ae6d9eeaa089e0e74aacdfa0326f#npm:5.0.7",
           {
-            "packageLocation": "./.yarn/cache/fork-ts-checker-webpack-plugin-npm-5.0.7-bde3194cf4-c010cc4091.zip/node_modules/fork-ts-checker-webpack-plugin/",
+            "packageLocation": "./.yarn/$$virtual/fork-ts-checker-webpack-plugin-virtual-086c682577/0/cache/fork-ts-checker-webpack-plugin-npm-5.0.7-bde3194cf4-c010cc4091.zip/node_modules/fork-ts-checker-webpack-plugin/",
             "packageDependencies": [
               [
                 "fork-ts-checker-webpack-plugin",
-                "npm:5.0.7"
+                "virtual:b28b86eb757c7fcf8e6d46169cac3d59893fc46f64d00944c46ff7480368d61f18b617aa1dd397db6dd5d0f082e3c324a5e6ae6d9eeaa089e0e74aacdfa0326f#npm:5.0.7"
               ],
               [
                 "@babel/code-frame",
                 "npm:7.10.4"
+              ],
+              [
+                "@types/eslint",
+                null
+              ],
+              [
+                "@types/typescript",
+                null
+              ],
+              [
+                "@types/webpack",
+                null
               ],
               [
                 "chalk",
@@ -5120,6 +5315,10 @@
               [
                 "deepmerge",
                 "npm:4.2.2"
+              ],
+              [
+                "eslint",
+                null
               ],
               [
                 "fs-extra",
@@ -5147,8 +5346,20 @@
               ],
               [
                 "typescript",
-                "patch:typescript@npm%3A3.9.7#builtin<compat/typescript>::version=3.9.7&hash=5b02a2"
+                "patch:typescript@npm%3A3.9.7#builtin<compat/typescript>::version=3.9.7&hash=5bf698"
+              ],
+              [
+                "webpack",
+                "npm:5.0.0-beta.22"
               ]
+            ],
+            "packagePeers": [
+              "@types/eslint",
+              "@types/typescript",
+              "@types/webpack",
+              "eslint",
+              "typescript",
+              "webpack"
             ],
             "linkType": "HARD"
           }
@@ -7969,14 +8180,21 @@
       "promise-inflight",
       [
         [
-          "npm:1.0.1",
+          "virtual:5c6c90d2e821c49a621166cce6a7ad53be7b46ba8751aa19ef38c8c62676f0bd88a840af9d2dab9a9b27b5ebef7e6d9ca49f6a742d29cd8db3b5c4801dc357c1#npm:1.0.1",
           {
-            "packageLocation": "./.yarn/cache/promise-inflight-npm-1.0.1-5bb925afac-c06bce0fc6.zip/node_modules/promise-inflight/",
+            "packageLocation": "./.yarn/$$virtual/promise-inflight-virtual-3c4b171d8e/0/cache/promise-inflight-npm-1.0.1-5bb925afac-c06bce0fc6.zip/node_modules/promise-inflight/",
             "packageDependencies": [
               [
                 "promise-inflight",
-                "npm:1.0.1"
+                "virtual:5c6c90d2e821c49a621166cce6a7ad53be7b46ba8751aa19ef38c8c62676f0bd88a840af9d2dab9a9b27b5ebef7e6d9ca49f6a742d29cd8db3b5c4801dc357c1#npm:1.0.1"
+              ],
+              [
+                "bluebird",
+                null
               ]
+            ],
+            "packagePeers": [
+              "bluebird"
             ],
             "linkType": "HARD"
           }
@@ -8529,7 +8747,7 @@
               ],
               [
                 "ajv-keywords",
-                "virtual:2b49db17d1e4e8854e6e7543c07eb7bc19ec9da65a1b99b9cb28e764846d419e5ecd6e057ad65249f2b928862ffd70dbf8a7c79643ccdd7c1c40cab5b59aa03f#npm:3.5.1"
+                "virtual:b668f124277280c5cab9400d7040d66d5a7531a8f1d3407b5bc9ff5c4f110b6ef3c2c2c757681610c7110ea14ea1039f45a1f2b99c6a7a9bb9fd6d72044c79e1#npm:3.5.1"
               ]
             ],
             "linkType": "HARD"
@@ -8554,7 +8772,7 @@
               ],
               [
                 "ajv-keywords",
-                "virtual:2b49db17d1e4e8854e6e7543c07eb7bc19ec9da65a1b99b9cb28e764846d419e5ecd6e057ad65249f2b928862ffd70dbf8a7c79643ccdd7c1c40cab5b59aa03f#npm:3.5.1"
+                "virtual:b668f124277280c5cab9400d7040d66d5a7531a8f1d3407b5bc9ff5c4f110b6ef3c2c2c757681610c7110ea14ea1039f45a1f2b99c6a7a9bb9fd6d72044c79e1#npm:3.5.1"
               ]
             ],
             "linkType": "HARD"
@@ -9249,6 +9467,10 @@
                 "virtual:a60737b07f7bfb171749fb1c36c1e2084e2f6c56b732be5b55f2239d233106c28268a4000b33e73efe454aecb23b0b12782057f85667bd16b58057fcae32dafc#npm:3.0.7"
               ],
               [
+                "@types/webpack",
+                null
+              ],
+              [
                 "cacache",
                 "npm:15.0.5"
               ],
@@ -9290,6 +9512,7 @@
               ]
             ],
             "packagePeers": [
+              "@types/webpack",
               "webpack"
             ],
             "linkType": "HARD"
@@ -9426,6 +9649,10 @@
                 "virtual:b28b86eb757c7fcf8e6d46169cac3d59893fc46f64d00944c46ff7480368d61f18b617aa1dd397db6dd5d0f082e3c324a5e6ae6d9eeaa089e0e74aacdfa0326f#npm:7.0.5"
               ],
               [
+                "@types/typescript",
+                null
+              ],
+              [
                 "chalk",
                 "npm:2.4.2"
               ],
@@ -9447,10 +9674,11 @@
               ],
               [
                 "typescript",
-                "patch:typescript@npm%3A3.9.7#builtin<compat/typescript>::version=3.9.7&hash=5b02a2"
+                "patch:typescript@npm%3A3.9.7#builtin<compat/typescript>::version=3.9.7&hash=5bf698"
               ]
             ],
             "packagePeers": [
+              "@types/typescript",
               "typescript"
             ],
             "linkType": "HARD"
@@ -9516,13 +9744,13 @@
       "typescript",
       [
         [
-          "patch:typescript@npm%3A3.9.7#builtin<compat/typescript>::version=3.9.7&hash=5b02a2",
+          "patch:typescript@npm%3A3.9.7#builtin<compat/typescript>::version=3.9.7&hash=5bf698",
           {
-            "packageLocation": "./.yarn/cache/typescript-patch-ba0dbfd217-f0d3d9c987.zip/node_modules/typescript/",
+            "packageLocation": "./.yarn/cache/typescript-patch-0426b016e8-f0d3d9c987.zip/node_modules/typescript/",
             "packageDependencies": [
               [
                 "typescript",
-                "patch:typescript@npm%3A3.9.7#builtin<compat/typescript>::version=3.9.7&hash=5b02a2"
+                "patch:typescript@npm%3A3.9.7#builtin<compat/typescript>::version=3.9.7&hash=5bf698"
               ]
             ],
             "linkType": "HARD"
@@ -9663,6 +9891,10 @@
                 "virtual:b28b86eb757c7fcf8e6d46169cac3d59893fc46f64d00944c46ff7480368d61f18b617aa1dd397db6dd5d0f082e3c324a5e6ae6d9eeaa089e0e74aacdfa0326f#npm:2.1.1"
               ],
               [
+                "@types/webpack",
+                null
+              ],
+              [
                 "loader-utils",
                 "npm:2.0.0"
               ],
@@ -9676,6 +9908,7 @@
               ]
             ],
             "packagePeers": [
+              "@types/webpack",
               "webpack"
             ],
             "linkType": "HARD"
@@ -10003,7 +10236,7 @@
               ],
               [
                 "typescript",
-                "patch:typescript@npm%3A3.9.7#builtin<compat/typescript>::version=3.9.7&hash=5b02a2"
+                "patch:typescript@npm%3A3.9.7#builtin<compat/typescript>::version=3.9.7&hash=5bf698"
               ]
             ],
             "linkType": "SOFT"

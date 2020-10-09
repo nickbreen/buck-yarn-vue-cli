@@ -1,0 +1,9 @@
+{
+  "name": "lib2",
+  "type": "module",
+  "description": "foo",
+  "main": "index.js",
+  "files": [
+    "index.js"
+  ]
+}

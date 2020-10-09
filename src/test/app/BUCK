@@ -1,1 +1,1 @@
-yarn( name = 'app', deps = '//:lib' )
+yarn( name = 'app', deps = ['//lib1:dist', '//lib2:dist'] )

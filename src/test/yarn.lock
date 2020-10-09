@@ -4,15 +4,21 @@
 __metadata:
   version: 4
 
-"a-lib@workspace:lib":
+"app@workspace:app":
   version: 0.0.0-use.local
-  resolution: "a-lib@workspace:lib"
+  resolution: "app@workspace:app"
   languageName: unknown
   linkType: soft
 
-"an-app@workspace:app":
+"lib1@workspace:lib1":
   version: 0.0.0-use.local
-  resolution: "an-app@workspace:app"
+  resolution: "lib1@workspace:lib1"
+  languageName: unknown
+  linkType: soft
+
+"lib2@workspace:lib2":
+  version: 0.0.0-use.local
+  resolution: "lib2@workspace:lib2"
   languageName: unknown
   linkType: soft
 
